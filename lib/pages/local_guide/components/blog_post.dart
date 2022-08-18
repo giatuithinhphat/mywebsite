@@ -87,18 +87,6 @@ class BlogPostcard extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
-                    IconButton(
-                        onPressed: () {},
-                        icon: SvgPicture.asset(
-                            "assets/icons/feather_thumbs-up.svg")),
-                    IconButton(
-                        onPressed: () {},
-                        icon: SvgPicture.asset(
-                            "assets/icons/feather_message-square.svg")),
-                    IconButton(
-                        onPressed: () {},
-                        icon: SvgPicture.asset(
-                            "assets/icons/feather_share-2.svg")),
                   ],
                 )
               ],

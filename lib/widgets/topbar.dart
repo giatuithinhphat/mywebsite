@@ -1,19 +1,16 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:website/constants/constants.dart';
 import 'package:website/constants/controllers.dart';
 import 'package:website/helpers/responsive.dart';
-import 'package:website/main.dart';
-import 'package:website/pages/home/home_page.dart';
-import 'package:website/pages/local_guide/local_guide_page.dart';
-import 'package:website/pages/services/services_page.dart';
-import 'package:website/widgets/vertical.dart';
 import '../routing/routes.dart';
 
 AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
     AppBar(
-      toolbarHeight: ResponsiveWidget.isDesktop(context) ? 150 : 60,
+      toolbarHeight: 60,
       leading: ResponsiveWidget.isMobile(context) ||
               ResponsiveWidget.isTablet(context)
           ? IconButton(
@@ -33,36 +30,42 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
         children: [
           // Left
           ResponsiveWidget.isDesktop(context)
-              ? Column(
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
-                      (Icons.pin_drop),
+                      (Icons.location_city),
                       color: mainColor,
-                      size: 68,
+                      size: 22,
                     ),
                     SizedBox(
-                      height: 12,
+                      width: defaultPadding,
                     ),
-                    Text(
-                      "17B Nguyễn Ngọc Sanh",
-                      style: TextStyle(
-                          color: lightgreyColor,
-                          fontFamily: 'Raleway',
-                          fontSize: 14,
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.normal),
-                    ),
-                    SizedBox(
-                      height: 3,
-                    ),
-                    Text(
-                      "Khóm 3, Phường 6, Tp. Cà Mau",
-                      style: TextStyle(
-                          color: lightgreyColor,
-                          fontFamily: 'Raleway',
-                          fontSize: 14,
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.normal),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "17B Nguyễn Ngọc Sanh, Khóm 3, Phường 6, Tp. Cà Mau",
+                          style: TextStyle(
+                              color: whiteColor,
+                              fontFamily: 'Raleway',
+                              fontSize: 12,
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.normal),
+                        ),
+                        SizedBox(
+                          height: 2,
+                        ),
+                        Text(
+                          "Tel: 0949.450.567 (Hạnh)",
+                          style: TextStyle(
+                              color: whiteColor,
+                              fontFamily: 'Raleway',
+                              fontSize: 12,
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ],
                     ),
                   ],
                 )
@@ -76,34 +79,41 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                   onTap: () {
                     navigationController.navigateTo(HomePageRoute);
                   },
-                  child: Column(
+                  child: Row(
                     children: [
                       // Logo
                       SvgPicture.asset(
                         "assets/logo/jlogo.svg",
-                        height: 68,
+                        height: 40,
                       ),
-
-                      // Tên tiệm
-                      Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
-                          child: Text(
+                      SizedBox(
+                        width: defaultPadding,
+                      ),
+                      Column(
+                        children: [
+                          // Tên tiệm
+                          Text(
                             "Giặt ủi Thịnh Phát".toUpperCase(),
                             style: TextStyle(
                                 color: mainColor,
                                 fontFamily: 'Raleway',
                                 fontWeight: FontWeight.bold,
-                                fontSize: 24),
-                          )),
-                      // Slogan
-                      Text(
-                        "Giặt Sạch - Sấy Thơm - Xếp Gọn",
-                        style: TextStyle(
-                            color: whiteColor,
-                            fontFamily: 'Raleway',
-                            fontWeight: FontWeight.normal,
-                            fontSize: 16),
-                      )
+                                fontSize: 14),
+                          ),
+                          SizedBox(
+                            height: 3,
+                          ),
+                          // Slogan
+                          Text(
+                            "Giặt Sạch - Sấy Thơm - Xếp Gọn",
+                            style: TextStyle(
+                                color: whiteColor,
+                                fontFamily: 'Raleway',
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12),
+                          )
+                        ],
+                      ),
                     ],
                   ),
                 )

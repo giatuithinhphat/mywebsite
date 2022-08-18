@@ -1,55 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:website/constants/constants.dart';
-import 'package:website/helpers/responsive.dart';
-import '../../blog.dart';
-import 'components/blog_post.dart';
-import 'components/categories.dart';
-import 'components/recent_post.dart';
-import 'components/search.dart';
 
-class HomePage extends StatelessWidget {
+import 'carousel_slider_page.dart';
+
+class HomePage extends StatefulWidget {
   const HomePage({
     Key key,
   }) : super(key: key);
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            flex: 2,
-            child: Column(
-              children: List.generate(
-                  blogPosts.length,
-                  (index) => BlogPostcard(
-                        blog: blogPosts[index],
-                      )),
-            ),
+      child: Column(children: [
+        CarouselSliderPage(),
+        Container(
+          alignment: Alignment.center,
+          margin: EdgeInsets.all(defaultPadding),
+          padding: EdgeInsets.all(defaultPadding),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(defaultPadding / 4)),
+            color: Colors.white,
           ),
-          if (!ResponsiveWidget.isMobile(context))
-            SizedBox(
-              width: defaultPadding,
-            ),
-          //Sizebar
-          if (!ResponsiveWidget.isMobile(context))
-            Expanded(
-                child: Column(
-              children: [
-                Search(),
-                SizedBox(
-                  height: defaultPadding,
-                ),
-                Categories(),
-                SizedBox(
-                  height: defaultPadding,
-                ),
-                RecentPost(),
-              ],
-            ))
-        ],
-      ),
+          width: MediaQuery.of(context).size.width,
+          child: Text(
+            "Địa điểm Ăn - Uống",
+            style: TextStyle(
+                color: blackColor,
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.bold),
+          ),
+        )
+      ]),
     );
   }
 }

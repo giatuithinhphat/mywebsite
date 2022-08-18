@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:website/helpers/responsive.dart';
 import 'package:website/pages/desktop_screen.dart';
 import 'package:website/pages/mobile_screen.dart';
@@ -8,7 +9,6 @@ import 'package:website/widgets/topbar.dart';
 
 class SiteLayout extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

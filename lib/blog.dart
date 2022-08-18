@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Blog {
   final String date, title, description, image;
 
@@ -34,3 +36,5 @@ List<Blog> blogPosts = [
         "Mobile banking has seen a huge increase since Coronavirus. In fact, CX platform Lightico found that 63 percent of people surveyed said they were more willing to try a new digital banking app than before the pandemic.So while you may be more inclined to bank remotely these days, cybercrime—especially targeting banks—is on the rise.",
   ),
 ];
+
+final List<String> imgUrl = blogPosts.map((blog) => blog.image).toList();

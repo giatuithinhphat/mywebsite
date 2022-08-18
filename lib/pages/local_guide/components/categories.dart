@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/constants/constants.dart';
-import 'package:website/pages/home/components/sidebar_container.dart';
+import 'package:website/pages/local_guide/components/sidebar_container.dart';
 
 class Categories extends StatelessWidget {
   const Categories({
