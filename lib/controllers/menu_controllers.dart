@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:website/constants/constants.dart';
-
-import '../routing/routes.dart';
+import 'package:website/routing/routes.dart';
 
 class MenuController extends GetxController {
   static MenuController instance = Get.find();
@@ -14,26 +12,26 @@ class MenuController extends GetxController {
     activeItem.value = itemName;
   }
 
+  onHover(String itemName) {
+    if (!isActive(itemName)) hoverItem.value = itemName;
+  }
+
   isActive(String itemName) => activeItem.value == itemName;
 
   isHovering(String itemName) => hoverItem.value == itemName;
 
-  onHover(String itemName) {
-    if (!isActive(itemName)) hoverItem.value == itemName;
-  }
-
   Widget returnIconFor(String itemName) {
     switch (itemName) {
       case HomePageRoute:
-        return _customIcon(CupertinoIcons.home, itemName);
-      case AboutPageRoute:
-        return _customIcon(CupertinoIcons.group_solid, itemName);
-      case ServicesPageRoute:
-        return _customIcon(CupertinoIcons.info, itemName);
+        return _customIcon(Icons.home, itemName);
       case LocalGuidePageRoute:
-        return _customIcon(CupertinoIcons.pin_slash, itemName);
+        return _customIcon(Icons.drive_eta, itemName);
+      case AboutPageRoute:
+        return _customIcon(Icons.people_alt_outlined, itemName);
+      case ServicesPageRoute:
+        return _customIcon(Icons.exit_to_app, itemName);
       default:
-        return _customIcon(CupertinoIcons.home, itemName);
+        return _customIcon(Icons.exit_to_app, itemName);
     }
   }
 

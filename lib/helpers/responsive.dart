@@ -1,40 +1,38 @@
 import 'package:flutter/material.dart';
 
-const int desktopScreenSize = 1366;
-const int tabletScreenSize = 768;
+const int desktopSize = 1366;
+const int tabletSize = 768;
+const int mobileSize = 360;
 
 class ResponsiveWidget extends StatelessWidget {
-  final Widget mobile;
-  final Widget tablet;
   final Widget desktop;
-
+  final Widget tablet;
+  final Widget mobile;
   const ResponsiveWidget({
     Key key,
-    @required this.mobile,
-    @required this.tablet,
-    @required this.desktop,
+    this.desktop,
+    this.tablet,
+    this.mobile,
   }) : super(key: key);
 
-// This size work fine on my design, maybe you need some customization depends on your design
+  static bool isSmallScreen(BuildContext context) =>
+      MediaQuery.of(context).size.width < tabletSize;
 
-  static bool isMobile(BuildContext context) =>
-      MediaQuery.of(context).size.width < tabletScreenSize;
+  static bool isMediumScreen(BuildContext context) =>
+      MediaQuery.of(context).size.width >= tabletSize &&
+      MediaQuery.of(context).size.width < desktopSize;
 
-  static bool isTablet(BuildContext context) =>
-      MediaQuery.of(context).size.width < desktopScreenSize &&
-      MediaQuery.of(context).size.width >= tabletScreenSize;
-
-  static bool isDesktop(BuildContext context) =>
-      MediaQuery.of(context).size.width >= desktopScreenSize;
+  static bool isLargeScreen(BuildContext context) =>
+      MediaQuery.of(context).size.width >= desktopSize;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: (context, constraints) {
-        double _width = constraints.maxWidth;
-        if (_width >= desktopScreenSize) {
+      builder: (context, constrants) {
+        double _width = constrants.maxWidth;
+        if (_width >= desktopSize) {
           return desktop;
-        } else if (_width < desktopScreenSize && _width >= tabletScreenSize) {
+        } else if (_width < desktopSize && _width >= tabletSize) {
           return tablet ?? desktop;
         } else {
           return mobile ?? desktop;

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:website/constants/constants.dart';
 import 'package:website/constants/controllers.dart';
 import 'package:website/helpers/responsive.dart';
-import 'package:website/pages/home/home_page.dart';
 import 'package:website/routing/routes.dart';
 import 'package:website/widgets/custom_text.dart';
 import 'package:website/widgets/side_menu_items.dart';
@@ -16,42 +15,57 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
     return Container(
-      color: whiteColor,
+      color: light,
       child: ListView(children: [
-        if (ResponsiveWidget.isMobile(context))
+        if (ResponsiveWidget.isSmallScreen(context))
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
                 height: 40,
               ),
-              Padding(
-                padding: EdgeInsets.only(right: 12),
-                child: SvgPicture.asset(
-                  "assets/logo/jlogo.svg",
-                  width: 40,
-                ),
-              ),
-              Flexible(
-                  child: CustomText(
-                text: "Dash",
-                size: 20,
-                weight: FontWeight.bold,
-                color: lightgreyColor,
-              )),
+              Row(
+                children: [
+                  SizedBox(
+                    width: _width / 48,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 12),
+                    child: SvgPicture.asset(
+                      "assets/logo/jlogo.svg",
+                      height: 80,
+                    ),
+                  ),
+                  Flexible(
+                      child: CustomText(
+                    text: "Dash",
+                    size: 20,
+                    weight: FontWeight.bold,
+                    color: blackColor,
+                  )),
+                  SizedBox(
+                    width: _width / 48,
+                  ),
+                ],
+              )
             ],
           ),
         Divider(
-          color: lightgreyColor.withOpacity(.1),
+          color: lightgrey.withOpacity(.1),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
-          children: menuItems
+          children: sideMenuItems
               .map((itemName) => SideMenuItem(
                     itemName: itemName,
                     onTap: () {
-                      navigationController.navigateTo(itemName);
+                      if (!menuController.isActive(itemName)) {
+                        menuController.changeActiveItemTo(itemName);
+                        if (ResponsiveWidget.isSmallScreen(context)) Get.back();
+                        // TODO :: Go to itemName route
+                        navigationController.navigateTo(itemName);
+                      }
                     },
                   ))
               .toList(),

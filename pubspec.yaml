@@ -67,6 +67,10 @@ flutter:
     - assets/icons/
     - assets/images/food/
     - assets/images/drink/
+    - assets/images/home/dung/
+    - assets/images/home/ngang/
+    - assets/images/home/vuong/
+    - assets/images/home/
     - assets/logo/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

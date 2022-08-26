@@ -1,11 +1,11 @@
 const HomePageRoute = "HomePage";
 const LocalGuidePageRoute = "LocalGuidePage";
-const AboutPageRoute = "AboutPage";
 const ServicesPageRoute = "ServicesPage";
+const AboutPageRoute = "AboutPage";
 
-List menuItems = [
+List sideMenuItems = [
   HomePageRoute,
   LocalGuidePageRoute,
-  AboutPageRoute,
-  ServicesPageRoute
+  ServicesPageRoute,
+  AboutPageRoute
 ];

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-
 import 'package:website/helpers/responsive.dart';
-import 'package:website/pages/desktop_screen.dart';
-import 'package:website/pages/mobile_screen.dart';
-import 'package:website/pages/tablet_screen.dart';
+import 'package:website/widgets/large_screen.dart';
 import 'package:website/widgets/side_menu.dart';
-import 'package:website/widgets/topbar.dart';
+import 'package:website/widgets/small_screen.dart';
+import 'package:website/widgets/top_nav.dart';
 
 class SiteLayout extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,9 +17,9 @@ class SiteLayout extends StatelessWidget {
         child: SideMenu(),
       ),
       body: ResponsiveWidget(
-        desktop: DesktopScreen(),
-        mobile: MobileScreen(),
-        tablet: TabletScreen(),
+        desktop: LargeScreen(),
+        tablet: SmallScreen(),
+        mobile: SmallScreen(),
       ),
     );
   }
