@@ -57,8 +57,94 @@ class HomePage extends StatelessWidget {
             height: defaultPadding * 2,
           ),
           PhanHoiKhachHang(),
+          SizedBox(
+            height: defaultPadding * 2,
+          ),
+          Footer(),
         ],
       ),
+    );
+  }
+}
+
+class Footer extends StatelessWidget {
+  const Footer({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 200,
+      width: double.infinity,
+      color: Colors.black,
+      padding: EdgeInsets.only(
+        top: defaultPadding,
+        left: defaultPadding,
+        right: defaultPadding,
+      ),
+      child: Row(children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Giặt ủi Thịnh Phát",
+              style: GoogleFonts.notoSerif(
+                textStyle: TextStyle(
+                    color: mainColor,
+                    fontSize: txtSizeThuong,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: defaultPadding,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: defaultPadding,
+                ),
+                Text(
+                  "17b Nguyễn Ngọc Sanh, K3, P6, Tp.CM",
+                  style: GoogleFonts.notoSerif(
+                    textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: txtSizeThuong,
+                        fontWeight: FontWeight.normal),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: defaultPadding,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.phone,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: defaultPadding,
+                ),
+                Text(
+                  "0949.450.567",
+                  style: GoogleFonts.notoSerif(
+                    textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: txtSizeThuong,
+                        fontWeight: FontWeight.normal),
+                  ),
+                ),
+              ],
+            )
+          ],
+        )
+      ]),
     );
   }
 }

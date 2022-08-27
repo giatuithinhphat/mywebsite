@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:website/blogs/khach_cmt.dart';
-import 'package:website/blogs/khach_cmt_card.dart';
+import 'package:website/blogs/khach.dart';
+import 'package:website/blogs/khach_card.dart';
 import 'package:website/constants/constants.dart';
-import 'package:provider/provider.dart';
 
 class PhanHoiKhachHang extends StatelessWidget {
   const PhanHoiKhachHang({
@@ -12,7 +11,6 @@ class PhanHoiKhachHang extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final khachs = Provider.of<Khachs>(context).khachs;
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.all(defaultPadding),
@@ -37,12 +35,53 @@ class PhanHoiKhachHang extends StatelessWidget {
                   fontWeight: FontWeight.normal),
             ),
           ),
-          ListView.builder(
-            itemCount: khachs.length,
-            itemBuilder: (context, index) => ChangeNotifierProvider.value(
-              value: khachs[index],
-              child: KhachCard(),
-            ),
+          Column(
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                          2, (index) => KhachCard(khach: khachs[index])),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      children: List.generate(
+                          2, (index) => KhachCard(khach: khachs[index + 2])),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      children: List.generate(
+                          2, (index) => KhachCard(khach: khachs[index + 4])),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      children: List.generate(
+                          2, (index) => KhachCard(khach: khachs[index + 6])),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      children: List.generate(
+                          2, (index) => KhachCard(khach: khachs[index + 8])),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),

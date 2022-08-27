@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/constants/constants.dart';
-import 'khach_cmt.dart';
+import 'khach.dart';
 
 class KhachCard extends StatelessWidget {
   final Khach khach;
@@ -24,6 +24,16 @@ class KhachCard extends StatelessWidget {
               children: [
                 Container(
                   constraints: BoxConstraints(maxHeight: 80),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(40)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ]),
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(
                       Radius.circular(40),
@@ -45,7 +55,7 @@ class KhachCard extends StatelessWidget {
                         style: GoogleFonts.notoSerif(
                           textStyle: TextStyle(
                               color: Colors.black,
-                              fontSize: txtSizeLon,
+                              fontSize: txtSizeThuong,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -75,19 +85,26 @@ class KhachCard extends StatelessWidget {
             constraints: BoxConstraints(minHeight: 100),
             padding: EdgeInsets.all(defaultPadding),
             decoration: BoxDecoration(
-              color: whiteColor,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(10),
-                bottomRight: Radius.circular(10),
-              ),
-            ),
+                color: whiteColor,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ]),
             child: Text(
               khach.nhanxet,
               style: GoogleFonts.notoSerif(
                 textStyle: TextStyle(
                   color: blackColor,
                   height: 1.5,
-                  fontSize: txtSizeNho,
+                  fontSize: txtSizeNho - 2,
                   fontWeight: FontWeight.normal,
                   fontStyle: FontStyle.italic,
                 ),
