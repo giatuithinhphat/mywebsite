@@ -41,16 +41,11 @@ class PhanHoiKhachHang extends StatelessWidget {
                 children: [
                   Expanded(
                     flex: 1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    child: Column(
                       children: List.generate(
                           2, (index) => KhachCard(khach: khachs[index])),
                     ),
                   ),
-                ],
-              ),
-              Row(
-                children: [
                   Expanded(
                     flex: 1,
                     child: Column(
@@ -70,13 +65,6 @@ class PhanHoiKhachHang extends StatelessWidget {
                     child: Column(
                       children: List.generate(
                           2, (index) => KhachCard(khach: khachs[index + 6])),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Column(
-                      children: List.generate(
-                          2, (index) => KhachCard(khach: khachs[index + 8])),
                     ),
                   ),
                 ],

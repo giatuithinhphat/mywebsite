@@ -8,16 +8,16 @@ class Khach {
 
 List<Khach> khachs = [
   Khach(
-    diachi: 'Phường 6, Tp.CM',
-    ten: 'Luke Bùi',
-    image: 'assets/images/home/vuong/luke.jpeg',
-    nhanxet: 'Lịch sự, sạch sẽ, chu đáo, vui vẻ.',
-  ),
-  Khach(
     diachi: 'Phường 2, Tp.CM',
     ten: 'Gấu Nguyễn',
     image: 'assets/images/home/vuong/gau.jpeg',
     nhanxet: 'Chủ tiệm tốt bụng vui vẻ đồ sạch thơm xếp gọn ủng hộ chủ tiệm ạ',
+  ),
+  Khach(
+    diachi: 'Phường 2, Tp.CM',
+    ten: 'Alvin Lâm',
+    image: 'assets/images/home/vuong/cuong.jpeg',
+    nhanxet: 'Giá ok, dịch vụ ngon, có về CM ghé shop nữa.',
   ),
   Khach(
     diachi: 'Giá Rai, Bạc Liêu',
@@ -69,6 +69,6 @@ List<Khach> khachs = [
     diachi: 'Phường 6, Tp.CM',
     ten: 'Trinh Nguyễn',
     image: 'assets/images/home/vuong/trinh.png',
-    nhanxet: 'Lịch sự, sạch sẽ, chu đáo, vui vẻ.',
+    nhanxet: 'Tiệm có bé Tèo thấy cưng ghê.',
   ),
 ];

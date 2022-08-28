@@ -17,7 +17,7 @@ class SideMenu extends StatelessWidget {
     return Container(
       color: light,
       child: ListView(children: [
-        if (ResponsiveWidget.isSmallScreen(context))
+        if (ResponsiveWidget.isMobile(context))
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -62,7 +62,7 @@ class SideMenu extends StatelessWidget {
                     onTap: () {
                       if (!menuController.isActive(itemName)) {
                         menuController.changeActiveItemTo(itemName);
-                        if (ResponsiveWidget.isSmallScreen(context)) Get.back();
+                        if (ResponsiveWidget.isMobile(context)) Get.back();
                         // TODO :: Go to itemName route
                         navigationController.navigateTo(itemName);
                       }

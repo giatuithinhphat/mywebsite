@@ -16,14 +16,14 @@ class DichVuCuaTiem extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           ColorFiltered(
-            colorFilter: ColorFilter.mode(
-              dark.withOpacity(.9),
-              BlendMode.modulate,
-            ),
-            child: Image.asset(
-              'assets/images/home/banghieu.png',
-            ),
-          ),
+              colorFilter: ColorFilter.mode(
+                dark.withOpacity(.9),
+                BlendMode.modulate,
+              ),
+              child: Image.asset(
+                "assets/images/home/banghieu.png",
+                fit: BoxFit.cover,
+              )),
           Column(
             children: [
               Row(

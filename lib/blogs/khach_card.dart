@@ -14,7 +14,7 @@ class KhachCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(defaultPadding),
-      constraints: BoxConstraints(maxWidth: 400),
+      constraints: BoxConstraints(maxWidth: 300),
       child: Column(
         children: [
           Container(
@@ -23,7 +23,6 @@ class KhachCard extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  constraints: BoxConstraints(maxHeight: 80),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(40)),
                       boxShadow: [
@@ -38,40 +37,45 @@ class KhachCard extends StatelessWidget {
                     borderRadius: BorderRadius.all(
                       Radius.circular(40),
                     ),
-                    child: Image.asset(khach.image),
+                    child: Image.asset(
+                      khach.image,
+                      height: MediaQuery.of(context).size.width / 20,
+                      width: MediaQuery.of(context).size.width / 20,
+                    ),
                   ),
                 ),
                 SizedBox(
                   width: defaultPadding / 2,
                 ),
-                Container(
-                  constraints: BoxConstraints(maxHeight: 80),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        khach.ten,
-                        style: GoogleFonts.notoSerif(
-                          textStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: txtSizeThuong,
-                              fontWeight: FontWeight.bold),
+                Flexible(
+                  child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          khach.ten,
+                          overflow: TextOverflow.fade,
+                          style: GoogleFonts.notoSerif(
+                            textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: txtSizeThuong,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: defaultPadding / 4,
-                      ),
-                      Text(
-                        khach.diachi,
-                        style: GoogleFonts.notoSerif(
-                          textStyle: TextStyle(
-                              color: Colors.red,
-                              fontSize: txtSizeNho - 3,
-                              fontWeight: FontWeight.normal),
+                        Text(
+                          khach.diachi,
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.notoSerif(
+                            textStyle: TextStyle(
+                                color: Colors.red,
+                                fontSize: txtSizeNho - 3,
+                                fontWeight: FontWeight.normal),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 )
               ],
