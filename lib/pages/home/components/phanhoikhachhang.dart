@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:website/blogs/khach.dart';
 import 'package:website/blogs/khach_card.dart';
 import 'package:website/constants/constants.dart';
+import 'package:website/helpers/responsive.dart';
 
 class PhanHoiKhachHang extends StatelessWidget {
   const PhanHoiKhachHang({
@@ -35,42 +36,46 @@ class PhanHoiKhachHang extends StatelessWidget {
                   fontWeight: FontWeight.normal),
             ),
           ),
-          Column(
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Column(
-                      children: List.generate(
-                          2, (index) => KhachCard(khach: khachs[index])),
+          ResponsiveWidget.isDesktop(context)
+              ? Column(
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            children: List.generate(
+                                2, (index) => KhachCard(khach: khachs[index])),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            children: List.generate(2,
+                                (index) => KhachCard(khach: khachs[index + 2])),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            children: List.generate(2,
+                                (index) => KhachCard(khach: khachs[index + 4])),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            children: List.generate(2,
+                                (index) => KhachCard(khach: khachs[index + 6])),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Column(
-                      children: List.generate(
-                          2, (index) => KhachCard(khach: khachs[index + 2])),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Column(
-                      children: List.generate(
-                          2, (index) => KhachCard(khach: khachs[index + 4])),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Column(
-                      children: List.generate(
-                          2, (index) => KhachCard(khach: khachs[index + 6])),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+                  ],
+                )
+              : Column(
+                  children: List.generate(khachs.length,
+                      (index) => KhachCard(khach: khachs[index]))),
         ],
       ),
     );

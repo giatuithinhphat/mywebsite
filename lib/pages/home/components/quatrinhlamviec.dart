@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:website/helpers/responsive.dart';
 
 import '../../../constants/constants.dart';
 
@@ -214,6 +215,7 @@ class QuyTrinhDoc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Expanded(
           flex: 1,
@@ -222,7 +224,9 @@ class QuyTrinhDoc extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: defaultPadding,
+          width: ResponsiveWidget.isTablet(context)
+              ? defaultPadding * 2
+              : defaultPadding,
         ),
         Expanded(
           flex: 2,
