@@ -32,7 +32,7 @@ class Footer extends StatelessWidget {
             "Tiệm giặt ủi Thịnh Phát luôn mong muốn học hỏi nhằm để phục vụ quý khách ngày một tốt hơn. ",
             style: GoogleFonts.notoSerif(
               textStyle: TextStyle(
-                  color: Colors.white,
+                  color: lightgrey,
                   fontSize: 14,
                   fontWeight: FontWeight.normal),
             ),
@@ -76,7 +76,7 @@ class Footer extends StatelessWidget {
                 "Design By - ",
                 style: GoogleFonts.notoSerif(
                   textStyle: TextStyle(
-                      color: Colors.white,
+                      color: lightgrey,
                       fontSize: 12,
                       fontWeight: FontWeight.normal),
                 ),
@@ -85,7 +85,7 @@ class Footer extends StatelessWidget {
                 "Luke Bùi",
                 style: GoogleFonts.notoSerif(
                   textStyle: TextStyle(
-                      color: Colors.blue,
+                      color: mainColor.withOpacity(.9),
                       fontSize: 12,
                       fontWeight: FontWeight.normal),
                 ),
@@ -108,20 +108,24 @@ class DanhMuc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-          horizontal: defaultPadding, vertical: defaultPadding / 3),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(defaultPadding)),
-          border: Border.all(color: mainColor, width: 1)),
-      child: InkWell(
-        child: Text(
-          txt,
-          style: GoogleFonts.notoSerif(
-            textStyle: TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-                fontWeight: FontWeight.normal),
+    return Flexible(
+      child: Container(
+        padding: EdgeInsets.symmetric(
+            horizontal: defaultPadding, vertical: defaultPadding / 3),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(defaultPadding)),
+            border: Border.all(color: mainColor, width: 1)),
+        child: InkWell(
+          child: Text(
+            txt,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: GoogleFonts.notoSerif(
+              textStyle: TextStyle(
+                  color: lightgrey,
+                  fontSize: 12,
+                  fontWeight: FontWeight.normal),
+            ),
           ),
         ),
       ),

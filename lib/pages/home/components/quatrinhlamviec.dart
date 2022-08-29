@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/helpers/responsive.dart';
+import 'package:website/pages/home/components/dichvucuatiem.dart';
 
 import '../../../constants/constants.dart';
 
-class QuaTrinhLamViecNgang extends StatelessWidget {
-  const QuaTrinhLamViecNgang({
-    Key key,
-  }) : super(key: key);
+class QuaTrinhLamViec extends StatelessWidget {
+  const QuaTrinhLamViec({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: defaultPadding * 2),
+      padding: EdgeInsets.symmetric(
+          horizontal: ResponsiveWidget.isDesktop(context)
+              ? defaultPadding * 2
+              : ResponsiveWidget.isTablet(context)
+                  ? defaultPadding
+                  : defaultPadding / 2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -40,116 +44,101 @@ class QuaTrinhLamViecNgang extends StatelessWidget {
           SizedBox(
             height: defaultPadding / 2,
           ),
-          Row(
-            children: [
-              QuyTrinhNgang(
-                title: "Nhận quần áo bẩn",
-                description: "Nhận thông tin khách hàng, nhận quần áo bẩn.",
-                linkhinh: "assets/images/home/ngang/ro.png",
-              ),
-              SizedBox(
-                width: defaultPadding,
-              ),
-              QuyTrinhNgang(
-                title: "Giặt quần áo",
-                description:
-                    "Bằng các hóa chất chuyên nghiệp, quần áo sạch vi khuẩn và bền màu.",
-                linkhinh: "assets/images/home/ngang/maygiat.png",
-              ),
-              SizedBox(
-                width: defaultPadding,
-              ),
-              QuyTrinhNgang(
-                title: "Sấy và xếp gọn",
-                description:
-                    "Quần áo sau khi được giặt sạch, sẽ qua giai đoạn sấy thơm và xếp gọn.",
-                linkhinh: "assets/images/home/ngang/aosomi.png",
-              ),
-              SizedBox(
-                width: defaultPadding,
-              ),
-              QuyTrinhNgang(
-                title: "Nhận hàng",
-                description:
-                    "Khách hàng nhận hàng tại tiệm hoặc sử dụng dịch vụ ship tận nơi.",
-                linkhinh: "assets/images/home/ngang/xetai.png",
-              ),
-            ],
-          ),
+          ResponsiveWidget.isDesktop(context) ? DesktopShow() : MobileTablet(),
         ],
       ),
     );
   }
 }
 
-class QuaTrinhLamViecDoc extends StatelessWidget {
-  const QuaTrinhLamViecDoc({Key key}) : super(key: key);
+class MobileTablet extends StatelessWidget {
+  const MobileTablet({
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: defaultPadding),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Quy trình làm việc",
-            style: GoogleFonts.notoSerif(
-              textStyle: TextStyle(
-                  color: blackColor,
-                  fontSize: txtSizeLon,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
-          SizedBox(
-            height: defaultPadding / 4,
-          ),
-          Text(
-            "Quy trình sử dụng dịch vụ giặt ủi đơn giản",
-            style: GoogleFonts.notoSerif(
-              textStyle: TextStyle(
-                  color: mainColor,
-                  fontSize: txtSizeThuong,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
-          SizedBox(
-            height: defaultPadding / 2,
-          ),
-          QuyTrinhDoc(
-            title: "Nhận quần áo bẩn",
-            description: "Nhận thông tin khách hàng, nhận quần áo bẩn.",
-            linkhinh: "assets/images/home/ngang/ro.png",
-          ),
-          SizedBox(
-            height: defaultPadding / 2,
-          ),
-          QuyTrinhDoc(
-            title: "Giặt quần áo",
-            description:
-                "Bằng các hóa chất chuyên nghiệp, quần áo sạch vi khuẩn và bền màu.",
-            linkhinh: "assets/images/home/ngang/maygiat.png",
-          ),
-          SizedBox(
-            height: defaultPadding / 2,
-          ),
-          QuyTrinhDoc(
-            title: "Sấy và xếp gọn",
-            description:
-                "Quần áo sau khi được giặt sạch, sẽ qua giai đoạn sấy thơm và xếp gọn.",
-            linkhinh: "assets/images/home/ngang/aosomi.png",
-          ),
-          SizedBox(
-            height: defaultPadding / 2,
-          ),
-          QuyTrinhDoc(
-            title: "Nhận hàng",
-            description:
-                "Khách hàng nhận hàng tại tiệm hoặc sử dụng dịch vụ ship tận nơi.",
-            linkhinh: "assets/images/home/ngang/xetai.png",
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        QuyTrinhDoc(
+          title: "Nhận quần áo bẩn",
+          description: "Nhận thông tin khách hàng, nhận quần áo bẩn.",
+          linkhinh: "assets/images/home/ngang/ro.png",
+        ),
+        SizedBox(
+          height: defaultPadding / 2,
+        ),
+        QuyTrinhDoc(
+          title: "Giặt quần áo",
+          description:
+              "Bằng các hóa chất chuyên nghiệp, quần áo sạch vi khuẩn và bền màu.",
+          linkhinh: "assets/images/home/ngang/maygiat.png",
+        ),
+        SizedBox(
+          height: defaultPadding / 2,
+        ),
+        QuyTrinhDoc(
+          title: "Sấy và xếp gọn",
+          description:
+              "Quần áo sau khi được giặt sạch, sẽ qua giai đoạn sấy thơm và xếp gọn.",
+          linkhinh: "assets/images/home/ngang/aosomi.png",
+        ),
+        SizedBox(
+          height: defaultPadding / 2,
+        ),
+        QuyTrinhDoc(
+          title: "Nhận hàng",
+          description:
+              "Khách hàng nhận hàng tại tiệm hoặc sử dụng dịch vụ ship tận nơi.",
+          linkhinh: "assets/images/home/ngang/xetai.png",
+        ),
+      ],
+    );
+  }
+}
+
+class DesktopShow extends StatelessWidget {
+  const DesktopShow({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        QuyTrinhNgang(
+          title: "Nhận quần áo bẩn",
+          description: "Nhận thông tin khách hàng, nhận quần áo bẩn.",
+          linkhinh: "assets/images/home/ngang/ro.png",
+        ),
+        SizedBox(
+          width: defaultPadding,
+        ),
+        QuyTrinhNgang(
+          title: "Giặt quần áo",
+          description:
+              "Bằng các hóa chất chuyên nghiệp, quần áo sạch vi khuẩn và bền màu.",
+          linkhinh: "assets/images/home/ngang/maygiat.png",
+        ),
+        SizedBox(
+          width: defaultPadding,
+        ),
+        QuyTrinhNgang(
+          title: "Sấy và xếp gọn",
+          description:
+              "Quần áo sau khi được giặt sạch, sẽ qua giai đoạn sấy thơm và xếp gọn.",
+          linkhinh: "assets/images/home/ngang/aosomi.png",
+        ),
+        SizedBox(
+          width: defaultPadding,
+        ),
+        QuyTrinhNgang(
+          title: "Nhận hàng",
+          description:
+              "Khách hàng nhận hàng tại tiệm hoặc sử dụng dịch vụ ship tận nơi.",
+          linkhinh: "assets/images/home/ngang/xetai.png",
+        ),
+      ],
     );
   }
 }

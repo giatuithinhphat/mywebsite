@@ -12,7 +12,12 @@ class HinhAnhCuaTiem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: defaultPadding),
+      padding: EdgeInsets.symmetric(
+          horizontal: ResponsiveWidget.isDesktop(context)
+              ? defaultPadding
+              : ResponsiveWidget.isTablet(context)
+                  ? defaultPadding / 2
+                  : defaultPadding / 3),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

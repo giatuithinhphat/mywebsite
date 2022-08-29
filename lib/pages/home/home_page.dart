@@ -22,52 +22,81 @@ class HomePage extends StatelessWidget {
           // Banner
           Image.asset("assets/images/home/ngang/banner.jpg"),
           SizedBox(
-            height: defaultPadding,
+            height: ResponsiveWidget.isDesktop(context)
+                ? defaultPadding
+                : ResponsiveWidget.isTablet(context)
+                    ? defaultPadding / 2
+                    : defaultPadding / 3,
           ),
           // Slogan
           Container(
-            padding: EdgeInsets.symmetric(horizontal: defaultPadding),
+            padding: EdgeInsets.symmetric(
+                horizontal: ResponsiveWidget.isDesktop(context)
+                    ? defaultPadding
+                    : ResponsiveWidget.isTablet(context)
+                        ? defaultPadding / 2
+                        : defaultPadding / 3),
             child: Text(
               "Quy trình và công nghệ hiện đại đảm bảo thời gian giao nhận hàng",
               textAlign: TextAlign.center,
-              maxLines: 1,
+              maxLines: ResponsiveWidget.isDesktop(context) ? 1 : 2,
               overflow: TextOverflow.visible,
               style: GoogleFonts.notoSerif(
                 textStyle: TextStyle(
                     color: blackColor,
-                    fontSize: txtSizeLon,
+                    fontSize: !ResponsiveWidget.isMobile(context)
+                        ? txtSizeLon
+                        : txtSizeThuong,
                     fontWeight: FontWeight.bold),
               ),
             ),
           ),
           SizedBox(
-            height: defaultPadding,
+            height: ResponsiveWidget.isDesktop(context)
+                ? defaultPadding
+                : ResponsiveWidget.isTablet(context)
+                    ? defaultPadding / 2
+                    : defaultPadding / 3,
           ),
           HinhQuangCao(),
           SizedBox(
-            height: defaultPadding * 2,
+            height: ResponsiveWidget.isDesktop(context)
+                ? defaultPadding
+                : ResponsiveWidget.isTablet(context)
+                    ? defaultPadding / 2
+                    : defaultPadding / 3,
           ),
           GioiThieuTiem(),
           SizedBox(
-            height: defaultPadding * 2,
+            height: ResponsiveWidget.isMobile(context)
+                ? defaultPadding / 2
+                : defaultPadding * 2,
           ),
-          ResponsiveWidget.isDesktop(context)
-              ? QuaTrinhLamViecNgang()
-              : QuaTrinhLamViecDoc(),
+          QuaTrinhLamViec(),
           SizedBox(
-            height: defaultPadding * 2,
+            height: ResponsiveWidget.isMobile(context)
+                ? defaultPadding / 2
+                : defaultPadding * 2,
           ),
           DichVuCuaTiem(),
           SizedBox(
-            height: defaultPadding * 2,
+            height: ResponsiveWidget.isMobile(context)
+                ? defaultPadding / 2
+                : defaultPadding * 2,
           ),
           HinhAnhCuaTiem(),
           SizedBox(
-            height: defaultPadding * 2,
+            height: ResponsiveWidget.isMobile(context)
+                ? defaultPadding / 2
+                : defaultPadding * 2,
           ),
           PhanHoiKhachHang(),
           SizedBox(
-            height: defaultPadding * 2,
+            height: ResponsiveWidget.isDesktop(context)
+                ? defaultPadding
+                : ResponsiveWidget.isTablet(context)
+                    ? defaultPadding / 2
+                    : 0,
           ),
           Footer(),
         ],

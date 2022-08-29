@@ -14,170 +14,37 @@ class KhachCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return !ResponsiveWidget.isDesktop(context)
-        ? Container(
+        ? DeskTopShow(khach: khach)
+        : MobileTabletShow(khach: khach);
+  }
+}
+
+class MobileTabletShow extends StatelessWidget {
+  const MobileTabletShow({
+    Key key,
+    @required this.khach,
+  }) : super(key: key);
+
+  final Khach khach;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(defaultPadding / 2),
+      constraints: BoxConstraints(maxWidth: 300),
+      child: Column(
+        children: [
+          Container(
             padding: EdgeInsets.symmetric(
-                horizontal: defaultPadding, vertical: defaultPadding / 2),
-            decoration: BoxDecoration(
-                border: Border(
-              bottom: BorderSide(width: 1.0, color: Color(0xFFDFDFDF)),
-            )),
+                horizontal: !ResponsiveWidget.isMobile(context)
+                    ? defaultPadding / 2
+                    : defaultPadding / 4),
+            constraints: BoxConstraints(maxHeight: 100),
             child: Row(
               children: [
-                Expanded(
-                  flex: 2,
-                  child: Column(
-                    children: [
-                      // Avatyar
-                      ClipRRect(
-                        borderRadius: BorderRadius.all(Radius.circular(40)),
-                        child: Image.asset(
-                          khach.image,
-                          height: 80,
-                        ),
-                      ),
-                      SizedBox(
-                        height: defaultPadding / 2,
-                      ),
-                      // Ten
-                      Text(
-                        khach.ten,
-                        style: GoogleFonts.notoSerif(
-                          textStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: txtSizeNho,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      SizedBox(
-                        height: defaultPadding / 4,
-                      ),
-                      Text(
-                        khach.diachi,
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.notoSerif(
-                          textStyle: TextStyle(
-                              color: Colors.red,
-                              fontSize: txtSizeNho - 3,
-                              fontWeight: FontWeight.normal),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: defaultPadding,
-                ),
-                Expanded(
-                  flex: 5,
-                  child: Container(
-                      padding: EdgeInsets.all(defaultPadding),
-                      decoration: BoxDecoration(
-                          color: whiteColor,
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(defaultPadding),
-                            bottomLeft: Radius.circular(defaultPadding),
-                            bottomRight: Radius.circular(defaultPadding),
-                          )),
-                      child: Text(
-                        khach.nhanxet,
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.notoSerif(
-                          textStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: txtSizeNho,
-                              fontWeight: FontWeight.normal,
-                              fontStyle: FontStyle.italic),
-                        ),
-                      )),
-                )
-              ],
-            ),
-          )
-        : Container(
-            padding: EdgeInsets.all(defaultPadding),
-            constraints: BoxConstraints(maxWidth: 300),
-            child: Column(
-              children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-                  constraints: BoxConstraints(maxHeight: 100),
-                  child: Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(40)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 5,
-                                blurRadius: 7,
-                                offset:
-                                    Offset(0, 3), // changes position of shadow
-                              ),
-                            ]),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(40),
-                          ),
-                          child: Image.asset(
-                            khach.image,
-                            height: MediaQuery.of(context).size.width / 20,
-                            width: MediaQuery.of(context).size.width / 20,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: defaultPadding / 2,
-                      ),
-                      Flexible(
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                khach.ten,
-                                overflow: TextOverflow.fade,
-                                style: GoogleFonts.notoSerif(
-                                  textStyle: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: txtSizeThuong,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                              Text(
-                                khach.diachi,
-                                maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.notoSerif(
-                                  textStyle: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: txtSizeNho - 3,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: defaultPadding / 3,
-                ),
-                // Comments
-                Container(
-                  constraints: BoxConstraints(minHeight: 100),
-                  padding: EdgeInsets.all(defaultPadding),
                   decoration: BoxDecoration(
-                      color: whiteColor,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10),
-                      ),
+                      borderRadius: BorderRadius.all(Radius.circular(40)),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.5),
@@ -186,21 +53,200 @@ class KhachCard extends StatelessWidget {
                           offset: Offset(0, 3), // changes position of shadow
                         ),
                       ]),
-                  child: Text(
-                    khach.nhanxet,
-                    style: GoogleFonts.notoSerif(
-                      textStyle: TextStyle(
-                        color: blackColor,
-                        height: 1.5,
-                        fontSize: txtSizeNho - 2,
-                        fontWeight: FontWeight.normal,
-                        fontStyle: FontStyle.italic,
-                      ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(40),
                     ),
+                    child: Image.asset(
+                      khach.image,
+                      height: MediaQuery.of(context).size.width / 20,
+                      width: MediaQuery.of(context).size.width / 20,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: defaultPadding / 2,
+                ),
+                Flexible(
+                  child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          khach.ten,
+                          overflow: TextOverflow.fade,
+                          style: GoogleFonts.notoSerif(
+                            textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: txtSizeThuong,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Text(
+                          khach.diachi,
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.notoSerif(
+                            textStyle: TextStyle(
+                                color: Colors.red,
+                                fontSize: txtSizeNho - 3,
+                                fontWeight: FontWeight.normal),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: defaultPadding / 3,
+          ),
+          // Comments
+          Container(
+            constraints: BoxConstraints(minHeight: 100),
+            padding: EdgeInsets.all(ResponsiveWidget.isDesktop(context)
+                ? defaultPadding
+                : ResponsiveWidget.isTablet(context)
+                    ? defaultPadding / 2
+                    : 5),
+            decoration: BoxDecoration(
+                color: whiteColor,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ]),
+            child: Text(
+              khach.nhanxet,
+              style: GoogleFonts.notoSerif(
+                textStyle: TextStyle(
+                  color: blackColor,
+                  height: 1.5,
+                  fontSize: txtSizeNho - 2,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DeskTopShow extends StatelessWidget {
+  const DeskTopShow({
+    Key key,
+    @required this.khach,
+  }) : super(key: key);
+
+  final Khach khach;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(bottom: defaultPadding / 2),
+      decoration: BoxDecoration(
+          border: Border(
+        bottom: BorderSide(width: 1.0, color: Color(0xFFDFDFDF)),
+      )),
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Column(
+              children: [
+                // Avatyar
+                ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(40)),
+                  child: Image.asset(
+                    khach.image,
+                    height: 80,
+                  ),
+                ),
+                SizedBox(
+                  height: defaultPadding / 2,
+                ),
+                // Ten
+                Text(
+                  khach.ten,
+                  style: GoogleFonts.notoSerif(
+                    textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: ResponsiveWidget.isMobile(context)
+                            ? 12
+                            : txtSizeNho,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(
+                  height: defaultPadding / 4,
+                ),
+                // Diachi
+                Text(
+                  khach.diachi,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.notoSerif(
+                    textStyle: TextStyle(
+                        color: Colors.red,
+                        fontSize: ResponsiveWidget.isMobile(context)
+                            ? 12
+                            : txtSizeNho,
+                        fontWeight: FontWeight.normal),
                   ),
                 ),
               ],
             ),
-          );
+          ),
+          SizedBox(
+            width: ResponsiveWidget.isMobile(context)
+                ? defaultPadding / 2
+                : defaultPadding,
+          ),
+          Expanded(
+            flex: 5,
+            child: Container(
+                padding: EdgeInsets.all(
+                  ResponsiveWidget.isMobile(context)
+                      ? defaultPadding / 2
+                      : defaultPadding,
+                ),
+                decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(defaultPadding),
+                      bottomLeft: Radius.circular(defaultPadding),
+                      bottomRight: Radius.circular(defaultPadding),
+                    )),
+                child: Text(
+                  khach.nhanxet,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.notoSerif(
+                    textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: ResponsiveWidget.isMobile(context)
+                            ? 12
+                            : txtSizeNho,
+                        fontWeight: FontWeight.normal,
+                        fontStyle: FontStyle.italic),
+                  ),
+                )),
+          )
+        ],
+      ),
+    );
   }
 }
