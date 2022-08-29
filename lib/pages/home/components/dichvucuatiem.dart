@@ -281,7 +281,7 @@ class DichVuCuaTiem extends StatelessWidget {
                                   : defaultPadding / 2,
                             ),
                             Text(
-                              "Sắp ra mắt dịch vụ Giặt Hấp Nón Bảo hiểm/Đồ bảo hộ Motor",
+                              "Sắp ra mắt dịch vụ Giặt Đồ bảo hộ Motor",
                               style: GoogleFonts.notoSerif(
                                 textStyle: TextStyle(
                                     color: Colors.white,

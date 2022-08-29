@@ -10,7 +10,7 @@ import 'custom_text.dart';
 final String itemName = "";
 AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
     AppBar(
-      leading: !ResponsiveWidget.isMobile(context)
+      leading: ResponsiveWidget.isDesktop(context)
           ? Row(
               children: [
                 Padding(
@@ -40,13 +40,13 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                 CustomText(
                   text: "Welcome to Thịnh Phát Laundromat",
                   color: Colors.white,
-                  size: ResponsiveWidget.isDesktop(context) ? 20 : 12,
+                  size: ResponsiveWidget.isDesktop(context) ? 20 : 14,
                   weight: FontWeight.bold,
                 ),
                 CustomText(
                   text: "17B Nguyễn Ngọc Sanh, K3, P6, Tp.Cà Mau",
                   color: lightgrey,
-                  size: 14,
+                  size: ResponsiveWidget.isDesktop(context) ? 14 : 12,
                 )
               ],
             ),
@@ -54,7 +54,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                 ? Expanded(child: Container())
                 : Container(),
             Visibility(
-              visible: !ResponsiveWidget.isMobile(context),
+              visible: ResponsiveWidget.isDesktop(context),
               child: Row(
                 children: [
                   IconMenu(
