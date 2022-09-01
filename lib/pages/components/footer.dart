@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../constants/constants.dart';
+import '../../constants/constants.dart';
 
 class Footer extends StatelessWidget {
   const Footer({
@@ -18,7 +18,7 @@ class Footer extends StatelessWidget {
         children: [
           Text(
             "Giặt Ủi Thịnh Phát",
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: mainColor,
                   fontSize: txtSizeLon,
@@ -30,7 +30,7 @@ class Footer extends StatelessWidget {
           ),
           Text(
             "Tiệm giặt ủi Thịnh Phát luôn mong muốn học hỏi nhằm để phục vụ quý khách ngày một tốt hơn. ",
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: lightgrey,
                   fontSize: 14,
@@ -74,7 +74,7 @@ class Footer extends StatelessWidget {
             children: [
               Text(
                 "Design By - ",
-                style: GoogleFonts.notoSerif(
+                style: GoogleFonts.roboto(
                   textStyle: TextStyle(
                       color: lightgrey,
                       fontSize: 12,
@@ -83,7 +83,7 @@ class Footer extends StatelessWidget {
               ),
               Text(
                 "Luke Bùi",
-                style: GoogleFonts.notoSerif(
+                style: GoogleFonts.roboto(
                   textStyle: TextStyle(
                       color: mainColor.withOpacity(.9),
                       fontSize: 12,
@@ -120,7 +120,7 @@ class DanhMuc extends StatelessWidget {
             txt,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: lightgrey,
                   fontSize: 12,

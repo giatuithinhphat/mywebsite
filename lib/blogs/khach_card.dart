@@ -76,7 +76,7 @@ class MobileTabletShow extends StatelessWidget {
                         Text(
                           khach.ten,
                           overflow: TextOverflow.fade,
-                          style: GoogleFonts.notoSerif(
+                          style: GoogleFonts.roboto(
                             textStyle: TextStyle(
                                 color: Colors.black,
                                 fontSize: txtSizeThuong,
@@ -87,7 +87,7 @@ class MobileTabletShow extends StatelessWidget {
                           khach.diachi,
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.notoSerif(
+                          style: GoogleFonts.roboto(
                             textStyle: TextStyle(
                                 color: Colors.red,
                                 fontSize: txtSizeNho - 3,
@@ -128,7 +128,7 @@ class MobileTabletShow extends StatelessWidget {
                 ]),
             child: Text(
               khach.nhanxet,
-              style: GoogleFonts.notoSerif(
+              style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                   color: blackColor,
                   height: 1.5,
@@ -181,7 +181,7 @@ class DeskTopShow extends StatelessWidget {
                 // Ten
                 Text(
                   khach.ten,
-                  style: GoogleFonts.notoSerif(
+                  style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                         color: Colors.black,
                         fontSize: ResponsiveWidget.isMobile(context)
@@ -198,7 +198,7 @@ class DeskTopShow extends StatelessWidget {
                   khach.diachi,
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
-                  style: GoogleFonts.notoSerif(
+                  style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                         color: Colors.red,
                         fontSize: ResponsiveWidget.isMobile(context)
@@ -234,7 +234,7 @@ class DeskTopShow extends StatelessWidget {
                   khach.nhanxet,
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
-                  style: GoogleFonts.notoSerif(
+                  style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                         color: Colors.black,
                         fontSize: ResponsiveWidget.isMobile(context)

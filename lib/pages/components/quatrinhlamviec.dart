@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/helpers/responsive.dart';
-import 'package:website/pages/home/components/dichvucuatiem.dart';
 
 import '../../../constants/constants.dart';
 
@@ -22,7 +21,7 @@ class QuaTrinhLamViec extends StatelessWidget {
         children: [
           Text(
             "Quy trình làm việc",
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
                   fontSize: txtSizeLon,
@@ -34,7 +33,7 @@ class QuaTrinhLamViec extends StatelessWidget {
           ),
           Text(
             "Quy trình sử dụng dịch vụ giặt ủi đơn giản",
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: mainColor,
                   fontSize: txtSizeThuong,
@@ -174,7 +173,7 @@ class QuyTrinhNgang extends StatelessWidget {
           ),
           Text(
             title,
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
                   fontSize: txtSizeThuong,
@@ -189,7 +188,7 @@ class QuyTrinhNgang extends StatelessWidget {
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.start,
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
                   fontSize: txtSizeNho,
@@ -230,7 +229,7 @@ class QuyTrinhDoc extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: GoogleFonts.notoSerif(
+                style: GoogleFonts.roboto(
                   textStyle: TextStyle(
                       color: blackColor,
                       fontSize: txtSizeThuong,
@@ -239,7 +238,7 @@ class QuyTrinhDoc extends StatelessWidget {
               ),
               Text(
                 description,
-                style: GoogleFonts.notoSerif(
+                style: GoogleFonts.roboto(
                   textStyle: TextStyle(
                       color: blackColor,
                       fontSize: txtSizeNho,

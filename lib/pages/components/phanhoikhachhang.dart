@@ -21,7 +21,7 @@ class PhanHoiKhachHang extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
             child: Text(
               "Phản hồi từ khách hàng",
-              style: GoogleFonts.notoSerif(
+              style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: blackColor,
                     fontSize: txtSizeLon,
@@ -33,7 +33,7 @@ class PhanHoiKhachHang extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
             child: Text(
               "Nhận xét của các khách hàng đã sử dụng dịch vụ tại bổn tiệm",
-              style: GoogleFonts.notoSerif(
+              style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: mainColor,
                     fontSize: txtSizeThuong,

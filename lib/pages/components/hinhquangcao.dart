@@ -13,6 +13,7 @@ class HinhQuangCao extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Container(
+        padding: EdgeInsets.symmetric(horizontal: defaultPadding),
         constraints: BoxConstraints(maxHeight: 400),
         child: Row(
           children: [
@@ -90,7 +91,7 @@ class Hinh extends StatelessWidget {
                         : defaultPadding / 3),
                 child: Center(
                     child: Text(titlel,
-                        style: GoogleFonts.notoSerif(
+                        style: GoogleFonts.roboto(
                           textStyle: TextStyle(
                               color: Colors.white,
                               fontSize: txtSizeLon + 6,

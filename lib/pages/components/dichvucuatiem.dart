@@ -220,7 +220,7 @@ class MobileShow extends StatelessWidget {
                   child: Center(
                     child: Text(
                       "Đặc Biệt",
-                      style: GoogleFonts.notoSerif(
+                      style: GoogleFonts.roboto(
                         textStyle: TextStyle(
                             color: Colors.white,
                             fontSize: txtSizeLon,
@@ -323,7 +323,7 @@ class MobileShow extends StatelessWidget {
             ),
             Text(
               "Sắp ra mắt dịch vụ Giặt Hấp",
-              style: GoogleFonts.notoSerif(
+              style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: Colors.white,
                     fontSize: txtSizeThuong - 2,
@@ -332,7 +332,7 @@ class MobileShow extends StatelessWidget {
             ),
             Text(
               "Nón Bảo hiểm/Đồ bảo hộ Motor",
-              style: GoogleFonts.notoSerif(
+              style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: mainColor,
                     fontSize: txtSizeThuong + 2,
@@ -385,7 +385,7 @@ class IconVaDichVuDacBiet extends StatelessWidget {
           ),
           Text(
             txt,
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: Colors.white,
                   fontSize: ResponsiveWidget.isDesktop(context)

@@ -14,7 +14,7 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text,
-        style: GoogleFonts.notoSerif(
+        style: GoogleFonts.roboto(
           textStyle: TextStyle(
               color: color ?? Colors.black,
               fontSize: size ?? txtSizeThuong,

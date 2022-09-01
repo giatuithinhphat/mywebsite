@@ -38,7 +38,7 @@ class MobileTabletShow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("Giặt ủi Thịnh Phát",
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
                   fontSize: txtSizeLon + 6,
@@ -48,7 +48,7 @@ class MobileTabletShow extends StatelessWidget {
           height: defaultPadding / 4,
         ),
         Text("Sơ lược về bổn tiệm",
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: mainColor,
                   fontSize: txtSizeThuong,
@@ -59,7 +59,7 @@ class MobileTabletShow extends StatelessWidget {
         ),
         Text(
           "Với kinh nghiệm làm việc nhiều năm về ngành nghề giặt ủi cùng với các trang thiết bị máy móc hiện đại và đội ngũ nhân viên chuyên nghiệp. Dịch vụ Giặt ủi Thịnh Phát tự hào là một trong những đối tác của các Cơ sở Spa, Nhà hàng và các Khách sạn lớn nhỏ tại TP. Cà Mau.",
-          style: GoogleFonts.notoSerif(
+          style: GoogleFonts.roboto(
             height: 1.5,
             textStyle: TextStyle(
                 color: blackColor,
@@ -100,7 +100,6 @@ class MobileTabletShow extends StatelessWidget {
         ),
         Container(
           padding: EdgeInsets.all(defaultPadding),
-          width: 250,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(
               Radius.circular(defaultPadding / 4),
@@ -110,7 +109,7 @@ class MobileTabletShow extends StatelessWidget {
           child: Center(
               child: Text(
             "Hotline : 0949450567",
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: Colors.white,
                   fontSize: txtSizeThuong,
@@ -160,7 +159,7 @@ class DesktopShow extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Giặt ủi Thịnh Phát",
-                  style: GoogleFonts.notoSerif(
+                  style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                         color: blackColor,
                         fontSize: txtSizeLon + 6,
@@ -170,7 +169,7 @@ class DesktopShow extends StatelessWidget {
                 height: defaultPadding / 4,
               ),
               Text("Sơ lược về bổn tiệm",
-                  style: GoogleFonts.notoSerif(
+                  style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                         color: mainColor,
                         fontSize: txtSizeThuong,
@@ -181,7 +180,7 @@ class DesktopShow extends StatelessWidget {
               ),
               Text(
                 "Với kinh nghiệm làm việc nhiều năm về ngành nghề giặt ủi cùng với các trang thiết bị máy móc hiện đại và đội ngũ nhân viên chuyên nghiệp. Dịch vụ Giặt ủi Thịnh Phát tự hào là một trong những đối tác của các Cơ sở Spa, Nhà hàng và các Khách sạn lớn nhỏ tại TP. Cà Mau.",
-                style: GoogleFonts.notoSerif(
+                style: GoogleFonts.roboto(
                   height: 1.5,
                   textStyle: TextStyle(
                       color: blackColor,
@@ -233,7 +232,7 @@ class DesktopShow extends StatelessWidget {
                     child: Center(
                         child: Text(
                       "Hotline : 0949450567",
-                      style: GoogleFonts.notoSerif(
+                      style: GoogleFonts.roboto(
                         textStyle: TextStyle(
                             color: Colors.white,
                             fontSize: ResponsiveWidget.isDesktop(context)
@@ -279,7 +278,7 @@ class IConGioiThieu extends StatelessWidget {
         ),
         Text(
           noidung,
-          style: GoogleFonts.notoSerif(
+          style: GoogleFonts.roboto(
             textStyle: TextStyle(
                 color: blackColor,
                 fontWeight: FontWeight.normal,

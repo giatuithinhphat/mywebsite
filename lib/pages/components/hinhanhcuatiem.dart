@@ -23,7 +23,7 @@ class HinhAnhCuaTiem extends StatelessWidget {
         children: [
           Text(
             "Một vài hình ảnh của tiệm",
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
                   fontSize: txtSizeLon,
@@ -31,7 +31,7 @@ class HinhAnhCuaTiem extends StatelessWidget {
             ),
           ),
           Text("Hình ảnh chụp thực tế tại tiệm giặt ủi",
-              style: GoogleFonts.notoSerif(
+              style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: mainColor,
                     fontSize: txtSizeThuong,

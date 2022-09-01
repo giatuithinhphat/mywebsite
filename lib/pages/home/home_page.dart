@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/constants/constants.dart';
 import 'package:website/helpers/responsive.dart';
-import 'package:website/pages/home/components/hinhquangcao.dart';
-import 'components/dichvucuatiem.dart';
-import '../../widgets/footer.dart';
-import 'components/gioithieutiem.dart';
-import 'components/hinhanhcuatiem.dart';
-import 'components/phanhoikhachhang.dart';
-import 'components/quatrinhlamviec.dart';
+import '../components/footer.dart';
+import '../components/dichvucuatiem.dart';
+import '../components/gioithieutiem.dart';
+import '../components/hinhanhcuatiem.dart';
+import '../components/hinhquangcao.dart';
+import '../components/phanhoikhachhang.dart';
+import '../components/quatrinhlamviec.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -41,11 +42,11 @@ class HomePage extends StatelessWidget {
               textAlign: TextAlign.center,
               maxLines: ResponsiveWidget.isDesktop(context) ? 1 : 2,
               overflow: TextOverflow.visible,
-              style: GoogleFonts.notoSerif(
+              style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: blackColor,
                     fontSize: !ResponsiveWidget.isMobile(context)
-                        ? txtSizeLon
+                        ? txtSizeLon + 6
                         : txtSizeThuong,
                     fontWeight: FontWeight.bold),
               ),

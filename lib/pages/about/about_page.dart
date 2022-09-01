@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/helpers/responsive.dart';
-import 'package:website/pages/home/components/quatrinhlamviec.dart';
-
 import '../../constants/constants.dart';
-import '../../widgets/footer.dart';
-import '../home/components/hinhanhcuatiem.dart';
+import '../components/footer.dart';
+import '../components/quatrinhlamviec.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key key}) : super(key: key);
@@ -13,6 +11,7 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: ResponsiveWidget.isMobile(context)
           ? MobileShow()
           : ResponsiveWidget.isTablet(context)
@@ -359,7 +358,7 @@ class IconVaText extends StatelessWidget {
           txt,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: GoogleFonts.notoSerif(
+          style: GoogleFonts.roboto(
             textStyle: TextStyle(
                 color: blackColor,
                 fontSize: txtSizeNho,
