@@ -17,21 +17,21 @@ class HinhQuangCao extends StatelessWidget {
         child: Row(
           children: [
             Hinh(
-              linkhinh: "assets/images/home/ngang/giatsach.png",
+              linkhinh: "assets/images/slogan/giatsach.webp",
               titlel: "Giặt sạch",
             ),
             SizedBox(
               width: defaultPadding,
             ),
             Hinh(
-              linkhinh: "assets/images/home/ngang/saythom.png",
+              linkhinh: "assets/images/slogan/saythom.webp",
               titlel: "Sấy thơm",
             ),
             SizedBox(
               width: defaultPadding,
             ),
             Hinh(
-              linkhinh: "assets/images/home/ngang/xepgon.png",
+              linkhinh: "assets/images/slogan/xepgon.webp",
               titlel: "Xếp gọn",
             ),
             SizedBox(

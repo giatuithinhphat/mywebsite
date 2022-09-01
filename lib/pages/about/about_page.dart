@@ -31,7 +31,7 @@ class TabletShow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset("assets/images/home/ngang/banner.jpg"),
+        Image.asset("assets/images/banner/banner.webp"),
         LienHe(),
         SizedBox(
           height: defaultPadding,
@@ -42,19 +42,19 @@ class TabletShow extends StatelessWidget {
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/1.png",
+              linkhinh: "assets/images/hinhquangcaotiem/1.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/2.png",
+              linkhinh: "assets/images/hinhquangcaotiem/2.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/3.png",
+              linkhinh: "assets/images/hinhquangcaotiem/3.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
@@ -70,19 +70,19 @@ class TabletShow extends StatelessWidget {
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/4.png",
+              linkhinh: "assets/images/hinhquangcaotiem/4.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/5.png",
+              linkhinh: "assets/images/hinhquangcaotiem/5.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/6.jpeg",
+              linkhinh: "assets/images/hinhquangcaotiem/6.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
@@ -127,7 +127,7 @@ class MobileShow extends StatelessWidget {
             ],
           ),
           child: ClipRRect(
-            child: Image.asset("assets/images/home/vuong/tphat.jpeg"),
+            child: Image.asset("assets/images/about/tphat.webp"),
           ),
         ),
         SizedBox(
@@ -177,7 +177,7 @@ class DesktopShow extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius:
                           BorderRadius.all(Radius.circular(defaultPadding)),
-                      child: Image.asset("assets/images/home/vuong/tphat.jpeg"),
+                      child: Image.asset("assets/images/about/tphat.webp"),
                     ),
                   )),
               SizedBox(

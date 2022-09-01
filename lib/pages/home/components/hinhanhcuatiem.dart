@@ -71,7 +71,8 @@ class DesktopShow extends StatelessWidget {
                 ]),
                 child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
-                    child: Image.asset("assets/images/home/vuong/ngang.png")),
+                    child: Image.asset(
+                        "assets/images/hinhquangcaotiem/ngang.webp")),
               )),
         ),
         SizedBox(
@@ -84,19 +85,19 @@ class DesktopShow extends StatelessWidget {
               Row(
                 children: [
                   HinhNhoTiem(
-                    linkhinh: "assets/images/home/vuong/5.png",
+                    linkhinh: "assets/images/hinhquangcaotiem/5.webp",
                   ),
                   SizedBox(
                     width: defaultPadding / 2,
                   ),
                   HinhNhoTiem(
-                    linkhinh: "assets/images/home/vuong/2.png",
+                    linkhinh: "assets/images/hinhquangcaotiem/2.webp",
                   ),
                   SizedBox(
                     width: defaultPadding / 2,
                   ),
                   HinhNhoTiem(
-                    linkhinh: "assets/images/home/vuong/3.png",
+                    linkhinh: "assets/images/hinhquangcaotiem/3.webp",
                   ),
                 ],
               ),
@@ -106,19 +107,19 @@ class DesktopShow extends StatelessWidget {
               Row(
                 children: [
                   HinhNhoTiem(
-                    linkhinh: "assets/images/home/vuong/4.png",
+                    linkhinh: "assets/images/hinhquangcaotiem/4.webp",
                   ),
                   SizedBox(
                     width: defaultPadding / 2,
                   ),
                   HinhNhoTiem(
-                    linkhinh: "assets/images/home/vuong/1.png",
+                    linkhinh: "assets/images/hinhquangcaotiem/1.webp",
                   ),
                   SizedBox(
                     width: defaultPadding / 2,
                   ),
                   HinhNhoTiem(
-                    linkhinh: "assets/images/home/vuong/6.jpeg",
+                    linkhinh: "assets/images/hinhquangcaotiem/6.webp",
                   ),
                 ],
               ),
@@ -150,7 +151,7 @@ class MobileShow extends StatelessWidget {
           ]),
           child: ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(10)),
-              child: Image.asset("assets/images/home/vuong/ngang.png")),
+              child: Image.asset("assets/images/hinhquangcaotiem/ngang.webp")),
         ),
         SizedBox(
           height: defaultPadding / 2,
@@ -158,19 +159,19 @@ class MobileShow extends StatelessWidget {
         Row(
           children: [
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/1.png",
+              linkhinh: "assets/images/hinhquangcaotiem/1.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/2.png",
+              linkhinh: "assets/images/hinhquangcaotiem/2.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/3.png",
+              linkhinh: "assets/images/hinhquangcaotiem/3.webp",
             ),
           ],
         ),
@@ -180,19 +181,19 @@ class MobileShow extends StatelessWidget {
         Row(
           children: [
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/4.png",
+              linkhinh: "assets/images/hinhquangcaotiem/4.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/5.png",
+              linkhinh: "assets/images/hinhquangcaotiem/5.webp",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/home/vuong/6.jpeg",
+              linkhinh: "assets/images/hinhquangcaotiem/6.webp",
             ),
           ],
         ),

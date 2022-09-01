@@ -67,7 +67,7 @@ class MobileTablet extends StatelessWidget {
         QuyTrinhDoc(
           title: "Nhận quần áo bẩn",
           description: "Nhận thông tin khách hàng, nhận quần áo bẩn.",
-          linkhinh: "assets/images/home/ngang/ro.png",
+          linkhinh: "assets/images/quatrinhlamviec/ro.webp",
         ),
         SizedBox(
           height: defaultPadding / 2,
@@ -76,7 +76,7 @@ class MobileTablet extends StatelessWidget {
           title: "Giặt quần áo",
           description:
               "Bằng các hóa chất chuyên nghiệp, quần áo sạch vi khuẩn và bền màu.",
-          linkhinh: "assets/images/home/ngang/maygiat.png",
+          linkhinh: "assets/images/quatrinhlamviec/maygiat.webp",
         ),
         SizedBox(
           height: defaultPadding / 2,
@@ -85,7 +85,7 @@ class MobileTablet extends StatelessWidget {
           title: "Sấy và xếp gọn",
           description:
               "Quần áo sau khi được giặt sạch, sẽ qua giai đoạn sấy thơm và xếp gọn.",
-          linkhinh: "assets/images/home/ngang/aosomi.png",
+          linkhinh: "assets/images/quatrinhlamviec/aosomi.webp",
         ),
         SizedBox(
           height: defaultPadding / 2,
@@ -94,7 +94,7 @@ class MobileTablet extends StatelessWidget {
           title: "Nhận hàng",
           description:
               "Khách hàng nhận hàng tại tiệm hoặc sử dụng dịch vụ ship tận nơi.",
-          linkhinh: "assets/images/home/ngang/xetai.png",
+          linkhinh: "assets/images/quatrinhlamviec/xetai.webp",
         ),
       ],
     );
@@ -113,7 +113,7 @@ class DesktopShow extends StatelessWidget {
         QuyTrinhNgang(
           title: "Nhận quần áo bẩn",
           description: "Nhận thông tin khách hàng, nhận quần áo bẩn.",
-          linkhinh: "assets/images/home/ngang/ro.png",
+          linkhinh: "assets/images/quatrinhlamviec/ro.webp",
         ),
         SizedBox(
           width: defaultPadding,
@@ -122,7 +122,7 @@ class DesktopShow extends StatelessWidget {
           title: "Giặt quần áo",
           description:
               "Bằng các hóa chất chuyên nghiệp, quần áo sạch vi khuẩn và bền màu.",
-          linkhinh: "assets/images/home/ngang/maygiat.png",
+          linkhinh: "assets/images/quatrinhlamviec/maygiat.webp",
         ),
         SizedBox(
           width: defaultPadding,
@@ -131,7 +131,7 @@ class DesktopShow extends StatelessWidget {
           title: "Sấy và xếp gọn",
           description:
               "Quần áo sau khi được giặt sạch, sẽ qua giai đoạn sấy thơm và xếp gọn.",
-          linkhinh: "assets/images/home/ngang/aosomi.png",
+          linkhinh: "assets/images/quatrinhlamviec/aosomi.webp",
         ),
         SizedBox(
           width: defaultPadding,
@@ -140,7 +140,7 @@ class DesktopShow extends StatelessWidget {
           title: "Nhận hàng",
           description:
               "Khách hàng nhận hàng tại tiệm hoặc sử dụng dịch vụ ship tận nơi.",
-          linkhinh: "assets/images/home/ngang/xetai.png",
+          linkhinh: "assets/images/quatrinhlamviec/xetai.webp",
         ),
       ],
     );

@@ -67,12 +67,17 @@ flutter:
   assets:
   - assets/icons/
   - assets/logo/
+  - assets/images/about/
+  - assets/images/banner/
+  - assets/images/dichvu/
   - assets/images/drink/
   - assets/images/food/
+  - assets/images/hinhquangcaotiem/
   - assets/images/home/
-  - assets/images/home/dung/
-  - assets/images/home/ngang/
-  - assets/images/home/vuong/
+  - assets/images/home/soluoc/
+  - assets/images/khach/
+  - assets/images/quatrinhlamviec/
+  - assets/images/slogan/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -148,7 +148,7 @@ class DesktopShow extends StatelessWidget {
                 ]),
             child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(defaultPadding)),
-                child: Image.asset("assets/images/home/ngang/soluoc.jpeg")),
+                child: Image.asset("assets/images/home/soluoc/1.webp")),
           ),
         ),
         SizedBox(

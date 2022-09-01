@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Banner
-          Image.asset("assets/images/home/ngang/banner.jpg"),
+          Image.asset("assets/images/banner/banner.webp"),
           SizedBox(
             height: ResponsiveWidget.isDesktop(context)
                 ? defaultPadding
