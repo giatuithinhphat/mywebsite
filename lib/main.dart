@@ -18,15 +18,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Thịnh Phát Laundromat",
-      theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
-              .apply(bodyColor: Colors.black),
-          pageTransitionsTheme: PageTransitionsTheme(builders: {
-            TargetPlatform.iOS: ZoomPageTransitionsBuilder(),
-            TargetPlatform.android: ZoomPageTransitionsBuilder(),
-          }),
-          primaryColor: Colors.white),
       home: SiteLayout(),
     );
   }

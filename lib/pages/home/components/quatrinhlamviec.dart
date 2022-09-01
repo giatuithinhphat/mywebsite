@@ -44,7 +44,11 @@ class QuaTrinhLamViec extends StatelessWidget {
           SizedBox(
             height: defaultPadding / 2,
           ),
-          ResponsiveWidget.isDesktop(context) ? DesktopShow() : MobileTablet(),
+          ResponsiveWidget.isDesktop(context)
+              ? DesktopShow()
+              : ResponsiveWidget.isTablet(context)
+                  ? DesktopShow()
+                  : MobileTablet(),
         ],
       ),
     );
@@ -182,7 +186,9 @@ class QuyTrinhNgang extends StatelessWidget {
           ),
           Text(
             description,
-            textAlign: TextAlign.center,
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.start,
             style: GoogleFonts.notoSerif(
               textStyle: TextStyle(
                   color: blackColor,

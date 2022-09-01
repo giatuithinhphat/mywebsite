@@ -46,15 +46,17 @@ class PhanHoiKhachHang extends StatelessWidget {
           ),
           ResponsiveWidget.isDesktop(context)
               ? DesktopShow()
-              : MobileTabletShow(),
+              : ResponsiveWidget.isTablet(context)
+                  ? TabletShow()
+                  : MobileShow(),
         ],
       ),
     );
   }
 }
 
-class MobileTabletShow extends StatelessWidget {
-  const MobileTabletShow({
+class MobileShow extends StatelessWidget {
+  const MobileShow({
     Key key,
   }) : super(key: key);
 
@@ -91,6 +93,54 @@ class DesktopShow extends StatelessWidget {
                     2, (index) => KhachCard(khach: khachs[index + 2])),
               ),
             ),
+            Expanded(
+              flex: 1,
+              child: Column(
+                children: List.generate(
+                    2, (index) => KhachCard(khach: khachs[index + 4])),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Column(
+                children: List.generate(
+                    2, (index) => KhachCard(khach: khachs[index + 6])),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class TabletShow extends StatelessWidget {
+  const TabletShow({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Column(
+                children: List.generate(
+                    2, (index) => KhachCard(khach: khachs[index])),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Column(
+                children: List.generate(
+                    2, (index) => KhachCard(khach: khachs[index + 2])),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
             Expanded(
               flex: 1,
               child: Column(

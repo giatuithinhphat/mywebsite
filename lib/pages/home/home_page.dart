@@ -4,7 +4,7 @@ import 'package:website/constants/constants.dart';
 import 'package:website/helpers/responsive.dart';
 import 'package:website/pages/home/components/hinhquangcao.dart';
 import 'components/dichvucuatiem.dart';
-import 'components/footer.dart';
+import '../../widgets/footer.dart';
 import 'components/gioithieutiem.dart';
 import 'components/hinhanhcuatiem.dart';
 import 'components/phanhoikhachhang.dart';

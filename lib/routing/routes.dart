@@ -1,7 +1,7 @@
-const HomePageRoute = "HomePage";
-const LocalGuidePageRoute = "LocalGuidePage";
-const ServicesPageRoute = "ServicesPage";
-const AboutPageRoute = "AboutPage";
+const HomePageRoute = "Home";
+const LocalGuidePageRoute = "Local Guide";
+const ServicesPageRoute = "Services";
+const AboutPageRoute = "About";
 
 List sideMenuItems = [
   HomePageRoute,
