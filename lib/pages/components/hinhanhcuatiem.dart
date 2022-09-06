@@ -26,16 +26,16 @@ class HinhAnhCuaTiem extends StatelessWidget {
             style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
-                  fontSize: txtSizeLon,
-                  fontWeight: FontWeight.bold),
+                  fontSize: txtSizeLon * 2,
+                  fontWeight: FontWeight.w800),
             ),
           ),
           Text("Hình ảnh chụp thực tế tại tiệm giặt ủi",
               style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: mainColor,
-                    fontSize: txtSizeThuong,
-                    fontWeight: FontWeight.normal),
+                    fontSize: txtSizeLon,
+                    fontWeight: FontWeight.w700),
               )),
           SizedBox(
             height: defaultPadding,

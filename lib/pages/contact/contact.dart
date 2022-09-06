@@ -5,8 +5,8 @@ import '../../constants/constants.dart';
 import '../components/footer.dart';
 import '../components/quatrinhlamviec.dart';
 
-class AboutPage extends StatelessWidget {
-  const AboutPage({Key key}) : super(key: key);
+class ContactPage extends StatelessWidget {
+  const ContactPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +31,12 @@ class TabletShow extends StatelessWidget {
     return Column(
       children: [
         Image.asset("assets/images/banner/banner.webp"),
+        SizedBox(
+          height: defaultPadding * 2,
+        ),
         LienHe(),
         SizedBox(
-          height: defaultPadding,
+          height: defaultPadding * 2,
         ),
         Row(
           children: [
@@ -89,9 +92,12 @@ class TabletShow extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: defaultPadding,
+          height: defaultPadding * 2,
         ),
         QuaTrinhLamViec(),
+        SizedBox(
+          height: defaultPadding,
+        ),
         Footer(),
       ],
     );
@@ -107,6 +113,9 @@ class MobileShow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(
+          height: defaultPadding,
+        ),
         LienHe(),
         SizedBox(
           height: defaultPadding,
@@ -130,7 +139,7 @@ class MobileShow extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: defaultPadding,
+          height: defaultPadding * 2,
         ),
         QuaTrinhLamViec(),
         Footer(),
@@ -148,12 +157,11 @@ class DesktopShow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Image.asset("assets/images/banner/banner.webp"),
         Container(
-          constraints: BoxConstraints(
-              minHeight: MediaQuery.of(context).size.height / 1.5),
           padding: EdgeInsets.symmetric(
-            horizontal: defaultPadding / 2,
-            vertical: defaultPadding / 2,
+            horizontal: defaultPadding * 2,
+            vertical: defaultPadding * 2,
           ),
           child: Row(
             children: [
@@ -180,22 +188,25 @@ class DesktopShow extends StatelessWidget {
                     ),
                   )),
               SizedBox(
-                width: defaultPadding / 2,
+                width: defaultPadding,
               ),
               Expanded(
-                flex: 3,
+                flex: 4,
                 child: Column(
                   children: [
                     LienHe(),
                     SizedBox(
                       height: defaultPadding / 2,
                     ),
-                    QuaTrinhLamViec(),
                   ],
                 ),
               )
             ],
           ),
+        ),
+        QuaTrinhLamViec(),
+        SizedBox(
+          height: defaultPadding,
         ),
         Footer(),
       ],
@@ -211,35 +222,41 @@ class LienHe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      padding: EdgeInsets.only(left: defaultPadding),
+      width: MediaQuery.of(context).size.width,
+      padding: !ResponsiveWidget.isMobile(context)
+          ? EdgeInsets.only(left: defaultPadding)
+          : EdgeInsets.all(defaultPadding),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
-            "Hãy liên hệ với chúng tôi",
+            !ResponsiveWidget.isMobile(context)
+                ? "Hãy liên hệ với chúng tôi"
+                : "Liên Hệ",
             textAlign: TextAlign.center,
-            style: GoogleFonts.notoSerif(
+            style: GoogleFonts.roboto(
               textStyle: TextStyle(
-                  color: Colors.black,
-                  fontSize: txtSizeLon * 1.2,
-                  fontWeight: FontWeight.bold),
+                  color: !ResponsiveWidget.isMobile(context)
+                      ? Colors.black
+                      : mainColor,
+                  fontSize: txtSizeLon * 2,
+                  fontWeight: FontWeight.w900),
             ),
           ),
           SizedBox(
-            height: defaultPadding,
+            height: defaultPadding * 2,
           ),
           Column(
             children: [
               Text(
                 "Đội ngũ nhân viên tư vấn Giặt Ủi Thịnh Phát có nhiều kinh nghiệm và tâm huyết với khách hàng. Sẵn sàng hỗ trợ khách hàng để tìm được dịch vụ mong muốn.",
                 maxLines: 2,
-                style: GoogleFonts.notoSerif(
+                style: GoogleFonts.roboto(
                   height: 1.5,
                   textStyle: TextStyle(
                       color: blackColor,
-                      fontSize: txtSizeNho,
-                      fontWeight: FontWeight.normal),
+                      fontSize: txtSizeThuong,
+                      fontWeight: FontWeight.w600),
                 ),
               ),
               SizedBox(
@@ -276,10 +293,10 @@ class LienHe extends StatelessWidget {
                   ),
                   Text(
                     "Giờ làm việc: 7:00 - 21:00",
-                    style: GoogleFonts.notoSerif(
+                    style: GoogleFonts.roboto(
                       textStyle: TextStyle(
                           color: lightgrey,
-                          fontSize: txtSizeNho,
+                          fontSize: txtSizeThuong,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
@@ -361,7 +378,7 @@ class IconVaText extends StatelessWidget {
           style: GoogleFonts.roboto(
             textStyle: TextStyle(
                 color: blackColor,
-                fontSize: txtSizeNho,
+                fontSize: txtSizeThuong,
                 fontWeight: FontWeight.w700),
           ),
         ),

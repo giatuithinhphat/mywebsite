@@ -24,9 +24,9 @@ class HomePage extends StatelessWidget {
           Image.asset("assets/images/banner/banner.webp"),
           SizedBox(
             height: ResponsiveWidget.isDesktop(context)
-                ? defaultPadding
+                ? defaultPadding * 3
                 : ResponsiveWidget.isTablet(context)
-                    ? defaultPadding / 2
+                    ? defaultPadding
                     : defaultPadding / 3,
           ),
           // Slogan
@@ -40,63 +40,63 @@ class HomePage extends StatelessWidget {
             child: Text(
               "Quy trình và công nghệ hiện đại đảm bảo thời gian giao nhận hàng",
               textAlign: TextAlign.center,
-              maxLines: ResponsiveWidget.isDesktop(context) ? 1 : 2,
+              maxLines: 2,
               overflow: TextOverflow.visible,
               style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: blackColor,
                     fontSize: !ResponsiveWidget.isMobile(context)
-                        ? txtSizeLon + 6
+                        ? txtSizeLon * 2
                         : txtSizeThuong,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.w900),
               ),
             ),
           ),
           SizedBox(
             height: ResponsiveWidget.isDesktop(context)
-                ? defaultPadding
+                ? defaultPadding * 3
                 : ResponsiveWidget.isTablet(context)
-                    ? defaultPadding / 2
+                    ? defaultPadding
                     : defaultPadding / 3,
           ),
           HinhQuangCao(),
           SizedBox(
             height: ResponsiveWidget.isDesktop(context)
-                ? defaultPadding
+                ? defaultPadding * 3
                 : ResponsiveWidget.isTablet(context)
-                    ? defaultPadding / 2
+                    ? defaultPadding
                     : defaultPadding / 3,
           ),
           GioiThieuTiem(),
           SizedBox(
             height: ResponsiveWidget.isMobile(context)
-                ? defaultPadding / 2
-                : defaultPadding * 2,
+                ? defaultPadding
+                : defaultPadding * 3,
           ),
           QuaTrinhLamViec(),
           SizedBox(
             height: ResponsiveWidget.isMobile(context)
-                ? defaultPadding / 2
-                : defaultPadding * 2,
+                ? defaultPadding
+                : defaultPadding * 3,
           ),
           DichVuCuaTiem(),
           SizedBox(
             height: ResponsiveWidget.isMobile(context)
-                ? defaultPadding / 2
-                : defaultPadding * 2,
+                ? defaultPadding
+                : defaultPadding * 3,
           ),
           HinhAnhCuaTiem(),
           SizedBox(
             height: ResponsiveWidget.isMobile(context)
-                ? defaultPadding / 2
-                : defaultPadding * 2,
+                ? defaultPadding
+                : defaultPadding * 3,
           ),
           PhanHoiKhachHang(),
           SizedBox(
             height: ResponsiveWidget.isDesktop(context)
-                ? defaultPadding
+                ? defaultPadding * 3
                 : ResponsiveWidget.isTablet(context)
-                    ? defaultPadding / 2
+                    ? defaultPadding
                     : 0,
           ),
           Footer(),

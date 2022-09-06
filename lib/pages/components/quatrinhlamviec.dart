@@ -24,24 +24,24 @@ class QuaTrinhLamViec extends StatelessWidget {
             style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
-                  fontSize: txtSizeLon,
+                  fontSize: txtSizeLon * 2,
                   fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: defaultPadding / 4,
+            height: defaultPadding,
           ),
           Text(
             "Quy trình sử dụng dịch vụ giặt ủi đơn giản",
             style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: mainColor,
-                  fontSize: txtSizeThuong,
+                  fontSize: txtSizeLon,
                   fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: defaultPadding / 2,
+            height: defaultPadding * 2,
           ),
           ResponsiveWidget.isDesktop(context)
               ? DesktopShow()
@@ -169,19 +169,19 @@ class QuyTrinhNgang extends StatelessWidget {
             height: 200,
           ),
           SizedBox(
-            height: defaultPadding / 2,
+            height: defaultPadding,
           ),
           Text(
             title,
             style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
-                  fontSize: txtSizeThuong,
+                  fontSize: txtSizeLon,
                   fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: defaultPadding / 2,
+            height: defaultPadding,
           ),
           Text(
             description,
@@ -189,9 +189,10 @@ class QuyTrinhNgang extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.start,
             style: GoogleFonts.roboto(
+              height: 1.5,
               textStyle: TextStyle(
                   color: blackColor,
-                  fontSize: txtSizeNho,
+                  fontSize: txtSizeThuong,
                   fontWeight: FontWeight.normal),
             ),
           )
@@ -232,16 +233,17 @@ class QuyTrinhDoc extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   textStyle: TextStyle(
                       color: blackColor,
-                      fontSize: txtSizeThuong,
+                      fontSize: txtSizeLon,
                       fontWeight: FontWeight.bold),
                 ),
               ),
               Text(
                 description,
                 style: GoogleFonts.roboto(
+                  height: 1.5,
                   textStyle: TextStyle(
                       color: blackColor,
-                      fontSize: txtSizeNho,
+                      fontSize: txtSizeThuong,
                       fontWeight: FontWeight.normal),
                 ),
               )

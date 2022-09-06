@@ -24,8 +24,8 @@ class PhanHoiKhachHang extends StatelessWidget {
               style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: blackColor,
-                    fontSize: txtSizeLon,
-                    fontWeight: FontWeight.bold),
+                    fontSize: txtSizeLon * 2,
+                    fontWeight: FontWeight.w800),
               ),
             ),
           ),
@@ -36,8 +36,8 @@ class PhanHoiKhachHang extends StatelessWidget {
               style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: mainColor,
-                    fontSize: txtSizeThuong,
-                    fontWeight: FontWeight.normal),
+                    fontSize: txtSizeLon,
+                    fontWeight: FontWeight.w800),
               ),
             ),
           ),

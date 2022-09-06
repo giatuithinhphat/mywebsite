@@ -75,8 +75,8 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                   ),
                   IconMenu(
                     icon: Icons.info,
-                    name: "About",
-                    itemName: AboutPageRoute,
+                    name: "Contact",
+                    itemName: ContactPageRoute,
                   ),
                   SizedBox(
                     width: defaultPadding,

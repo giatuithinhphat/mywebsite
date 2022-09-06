@@ -26,7 +26,7 @@ class MenuController extends GetxController {
         return _customIcon(Icons.home, itemName);
       case LocalGuidePageRoute:
         return _customIcon(Icons.drive_eta, itemName);
-      case AboutPageRoute:
+      case ContactPageRoute:
         return _customIcon(Icons.people_alt_outlined, itemName);
       case ServicesPageRoute:
         return _customIcon(Icons.exit_to_app, itemName);

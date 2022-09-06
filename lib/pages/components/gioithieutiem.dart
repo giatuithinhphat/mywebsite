@@ -41,7 +41,7 @@ class MobileTabletShow extends StatelessWidget {
             style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: blackColor,
-                  fontSize: txtSizeLon + 6,
+                  fontSize: txtSizeLon,
                   fontWeight: FontWeight.bold),
             )),
         SizedBox(
@@ -162,8 +162,8 @@ class DesktopShow extends StatelessWidget {
                   style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                         color: blackColor,
-                        fontSize: txtSizeLon + 6,
-                        fontWeight: FontWeight.bold),
+                        fontSize: txtSizeLon * 2,
+                        fontWeight: FontWeight.w800),
                   )),
               SizedBox(
                 height: defaultPadding / 4,
@@ -172,8 +172,8 @@ class DesktopShow extends StatelessWidget {
                   style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                         color: mainColor,
-                        fontSize: txtSizeThuong,
-                        fontWeight: FontWeight.normal),
+                        fontSize: txtSizeLon,
+                        fontWeight: FontWeight.w700),
                   )),
               SizedBox(
                 height: defaultPadding / 2,
@@ -185,7 +185,7 @@ class DesktopShow extends StatelessWidget {
                   textStyle: TextStyle(
                       color: blackColor,
                       fontSize: txtSizeThuong,
-                      fontWeight: FontWeight.normal),
+                      fontWeight: FontWeight.w400),
                 ),
               ),
               SizedBox(
@@ -238,7 +238,7 @@ class DesktopShow extends StatelessWidget {
                             fontSize: ResponsiveWidget.isDesktop(context)
                                 ? txtSizeLon
                                 : txtSizeNho,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.w700),
                       ),
                     )),
                   ),
@@ -281,7 +281,7 @@ class IConGioiThieu extends StatelessWidget {
           style: GoogleFonts.roboto(
             textStyle: TextStyle(
                 color: blackColor,
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.w500,
                 fontSize: txtSizeThuong),
           ),
         ),

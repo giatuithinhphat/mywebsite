@@ -30,6 +30,7 @@ class Footer extends StatelessWidget {
           ),
           Text(
             "Tiệm giặt ủi Thịnh Phát luôn mong muốn học hỏi nhằm để phục vụ quý khách ngày một tốt hơn. ",
+            textAlign: TextAlign.center,
             style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: lightgrey,
