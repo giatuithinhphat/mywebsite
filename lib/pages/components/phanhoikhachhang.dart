@@ -18,7 +18,7 @@ class PhanHoiKhachHang extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+            padding: EdgeInsets.symmetric(horizontal: defaultPadding),
             child: Text(
               "Phản hồi từ khách hàng",
               style: GoogleFonts.roboto(
@@ -29,8 +29,11 @@ class PhanHoiKhachHang extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(
+            height: defaultPadding / 4,
+          ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+            padding: EdgeInsets.symmetric(horizontal: defaultPadding),
             child: Text(
               "Nhận xét của các khách hàng đã sử dụng dịch vụ tại bổn tiệm",
               style: GoogleFonts.roboto(

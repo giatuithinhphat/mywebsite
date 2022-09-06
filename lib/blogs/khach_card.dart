@@ -128,6 +128,7 @@ class MobileTabletShow extends StatelessWidget {
                 ]),
             child: Text(
               khach.nhanxet,
+              textAlign: TextAlign.justify,
               style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                   color: blackColor,

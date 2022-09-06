@@ -37,13 +37,24 @@ class MobileTabletShow extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Giặt ủi Thịnh Phát",
-            style: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                  color: blackColor,
-                  fontSize: txtSizeLon,
-                  fontWeight: FontWeight.bold),
-            )),
+        Row(
+          children: [
+            Text("Giặt ủi ",
+                style: GoogleFonts.roboto(
+                  textStyle: TextStyle(
+                      color: blackColor,
+                      fontSize: txtSizeLon,
+                      fontWeight: FontWeight.w800),
+                )),
+            Text("Thịnh Phát",
+                style: GoogleFonts.roboto(
+                  textStyle: TextStyle(
+                      color: mainColor,
+                      fontSize: txtSizeLon,
+                      fontWeight: FontWeight.w800),
+                )),
+          ],
+        ),
         SizedBox(
           height: defaultPadding / 4,
         ),
@@ -158,13 +169,24 @@ class DesktopShow extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Giặt ủi Thịnh Phát",
-                  style: GoogleFonts.roboto(
-                    textStyle: TextStyle(
-                        color: blackColor,
-                        fontSize: txtSizeLon * 2,
-                        fontWeight: FontWeight.w800),
-                  )),
+              Row(
+                children: [
+                  Text("Giặt ủi ",
+                      style: GoogleFonts.roboto(
+                        textStyle: TextStyle(
+                            color: blackColor,
+                            fontSize: txtSizeLon * 2,
+                            fontWeight: FontWeight.w800),
+                      )),
+                  Text("Thịnh Phát",
+                      style: GoogleFonts.roboto(
+                        textStyle: TextStyle(
+                            color: mainColor,
+                            fontSize: txtSizeLon * 2,
+                            fontWeight: FontWeight.w800),
+                      )),
+                ],
+              ),
               SizedBox(
                 height: defaultPadding / 4,
               ),
@@ -180,6 +202,7 @@ class DesktopShow extends StatelessWidget {
               ),
               Text(
                 "Với kinh nghiệm làm việc nhiều năm về ngành nghề giặt ủi cùng với các trang thiết bị máy móc hiện đại và đội ngũ nhân viên chuyên nghiệp. Dịch vụ Giặt ủi Thịnh Phát tự hào là một trong những đối tác của các Cơ sở Spa, Nhà hàng và các Khách sạn lớn nhỏ tại TP. Cà Mau.",
+                textAlign: TextAlign.justify,
                 style: GoogleFonts.roboto(
                   height: 1.5,
                   textStyle: TextStyle(
@@ -280,7 +303,7 @@ class IConGioiThieu extends StatelessWidget {
           noidung,
           style: GoogleFonts.roboto(
             textStyle: TextStyle(
-                color: blackColor,
+                color: Colors.black,
                 fontWeight: FontWeight.w500,
                 fontSize: txtSizeThuong),
           ),

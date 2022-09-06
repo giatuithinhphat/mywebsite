@@ -59,8 +59,14 @@ class NoiDungNgang extends StatelessWidget {
         CheckVaNoiDung(
           txt: txtLeft,
         ),
+        SizedBox(
+          width: defaultPadding,
+        ),
         CheckVaNoiDung(
           txt: txtMid,
+        ),
+        SizedBox(
+          width: defaultPadding,
         ),
         CheckVaNoiDung(
           txt: txtRight,
@@ -101,6 +107,7 @@ class CheckVaNoiDung extends StatelessWidget {
                 txt,
                 overflow: TextOverflow.clip,
                 maxLines: 4,
+                textAlign: TextAlign.justify,
                 style: GoogleFonts.roboto(
                   height: 1.5,
                   textStyle: TextStyle(

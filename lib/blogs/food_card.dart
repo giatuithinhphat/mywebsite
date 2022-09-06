@@ -1,6 +1,4 @@
-import 'dart:html';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:website/constants/constants.dart';
 
 import 'food_blog.dart';
@@ -39,6 +37,7 @@ class FoodBlogCard extends StatelessWidget {
                     ),
                     Text(
                       blog.description,
+                      textAlign: TextAlign.justify,
                       style: Theme.of(context).textTheme.caption,
                     ),
                   ],

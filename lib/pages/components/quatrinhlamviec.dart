@@ -12,7 +12,7 @@ class QuaTrinhLamViec extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(
           horizontal: ResponsiveWidget.isDesktop(context)
-              ? defaultPadding * 2
+              ? defaultPadding
               : ResponsiveWidget.isTablet(context)
                   ? defaultPadding
                   : defaultPadding / 2),
@@ -29,7 +29,7 @@ class QuaTrinhLamViec extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: defaultPadding,
+            height: defaultPadding / 4,
           ),
           Text(
             "Quy trình sử dụng dịch vụ giặt ủi đơn giản",
@@ -187,7 +187,7 @@ class QuyTrinhNgang extends StatelessWidget {
             description,
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.start,
+            textAlign: TextAlign.center,
             style: GoogleFonts.roboto(
               height: 1.5,
               textStyle: TextStyle(

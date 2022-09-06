@@ -251,21 +251,17 @@ class LienHe extends StatelessWidget {
               Text(
                 "Đội ngũ nhân viên tư vấn Giặt Ủi Thịnh Phát có nhiều kinh nghiệm và tâm huyết với khách hàng. Sẵn sàng hỗ trợ khách hàng để tìm được dịch vụ mong muốn.",
                 maxLines: 2,
+                textAlign: TextAlign.justify,
                 style: GoogleFonts.roboto(
                   height: 1.5,
                   textStyle: TextStyle(
                       color: blackColor,
-                      fontSize: txtSizeThuong,
+                      fontSize: txtSizeThuong + 6,
                       fontWeight: FontWeight.w600),
                 ),
               ),
               SizedBox(
-                height: defaultPadding / 2,
-              ),
-              IconVaText(
-                  icon: Icons.phone, txt: "0949.450.567 - (Hạnh Trịnh)."),
-              SizedBox(
-                height: defaultPadding / 2,
+                height: defaultPadding,
               ),
               IconVaText(
                   icon: Icons.pin_drop,
@@ -273,20 +269,20 @@ class LienHe extends StatelessWidget {
                       ? "17B Nguyễn Ngọc Sanh, K3, P6, Tp.CM"
                       : "17B Nguyễn Ngọc Sanh, Khóm 3, Phường 6, Tp. Cà Mau"),
               SizedBox(
-                height: defaultPadding / 2,
+                height: defaultPadding,
               ),
               IconVaText(
                 icon: Icons.mail,
                 txt: "myhanhtrinh7171@gmail.com",
               ),
               SizedBox(
-                height: defaultPadding / 2,
+                height: defaultPadding,
               ),
               Row(
                 children: [
                   Icon(
                     Icons.punch_clock,
-                    color: lightgrey,
+                    color: mainColor,
                   ),
                   SizedBox(
                     width: defaultPadding,
@@ -295,9 +291,42 @@ class LienHe extends StatelessWidget {
                     "Giờ làm việc: 7:00 - 21:00",
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(
-                          color: lightgrey,
+                          color: Colors.black,
                           fontSize: txtSizeThuong,
-                          fontWeight: FontWeight.normal),
+                          fontWeight: FontWeight.w800),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: defaultPadding,
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.phone,
+                    color: mainColor,
+                  ),
+                  SizedBox(
+                    width: defaultPadding,
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: defaultPadding,
+                        vertical: defaultPadding / 2),
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(defaultPadding),
+                        )),
+                    child: Text(
+                      "0949.450.567 - Gặp Hạnh",
+                      style: GoogleFonts.roboto(
+                        textStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: txtSizeThuong,
+                            fontWeight: FontWeight.w800),
+                      ),
                     ),
                   ),
                 ],

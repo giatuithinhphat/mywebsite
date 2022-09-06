@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:website/helpers/responsive.dart';
 
 import '../../constants/constants.dart';
 
@@ -22,7 +23,7 @@ class Footer extends StatelessWidget {
               textStyle: TextStyle(
                   color: mainColor,
                   fontSize: txtSizeLon,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.w800),
             ),
           ),
           SizedBox(
@@ -34,8 +35,22 @@ class Footer extends StatelessWidget {
             style: GoogleFonts.roboto(
               textStyle: TextStyle(
                   color: lightgrey,
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal),
+                  fontSize: ResponsiveWidget.isMobile(context) ? 12 : 14,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
+          SizedBox(
+            height: defaultPadding,
+          ),
+          Text(
+            "Địa chỉ: 17B Nguyễn Ngọc Sanh, Khóm 3, Phường 6, Thành phố Cà Mau",
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            style: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                  color: lightgrey,
+                  fontSize: ResponsiveWidget.isMobile(context) ? 12 : 14,
+                  fontWeight: FontWeight.w400),
             ),
           ),
           SizedBox(
@@ -79,7 +94,7 @@ class Footer extends StatelessWidget {
                   textStyle: TextStyle(
                       color: lightgrey,
                       fontSize: 12,
-                      fontWeight: FontWeight.normal),
+                      fontWeight: FontWeight.w400),
                 ),
               ),
               Text(
@@ -88,7 +103,7 @@ class Footer extends StatelessWidget {
                   textStyle: TextStyle(
                       color: mainColor.withOpacity(.9),
                       fontSize: 12,
-                      fontWeight: FontWeight.normal),
+                      fontWeight: FontWeight.w400),
                 ),
               ),
             ],

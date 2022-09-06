@@ -30,6 +30,9 @@ class HinhAnhCuaTiem extends StatelessWidget {
                   fontWeight: FontWeight.w800),
             ),
           ),
+          SizedBox(
+            height: defaultPadding / 4,
+          ),
           Text("Hình ảnh chụp thực tế tại tiệm giặt ủi",
               style: GoogleFonts.roboto(
                 textStyle: TextStyle(
