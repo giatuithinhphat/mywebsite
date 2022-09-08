@@ -66,34 +66,34 @@ class MobileTablet extends StatelessWidget {
         QuyTrinhDoc(
           title: "Nhận quần áo bẩn",
           description: "Nhận thông tin khách hàng, nhận quần áo bẩn.",
-          linkhinh: "assets/images/quatrinhlamviec/ro.webp",
+          linkhinh: "assets/images/services/nhan.jpeg",
         ),
         SizedBox(
-          height: defaultPadding / 2,
+          height: defaultPadding,
         ),
         QuyTrinhDoc(
           title: "Giặt quần áo",
           description:
               "Bằng các hóa chất chuyên nghiệp, quần áo sạch vi khuẩn và bền màu.",
-          linkhinh: "assets/images/quatrinhlamviec/maygiat.webp",
+          linkhinh: "assets/images/services/giat.jpeg",
         ),
         SizedBox(
-          height: defaultPadding / 2,
+          height: defaultPadding,
         ),
         QuyTrinhDoc(
           title: "Sấy và xếp gọn",
           description:
               "Quần áo sau khi được giặt sạch, sẽ qua giai đoạn sấy thơm và xếp gọn.",
-          linkhinh: "assets/images/quatrinhlamviec/aosomi.webp",
+          linkhinh: "assets/images/services/xep.jpeg",
         ),
         SizedBox(
-          height: defaultPadding / 2,
+          height: defaultPadding,
         ),
         QuyTrinhDoc(
-          title: "Nhận hàng",
+          title: "Giao hàng",
           description:
               "Khách hàng nhận hàng tại tiệm hoặc sử dụng dịch vụ ship tận nơi.",
-          linkhinh: "assets/images/quatrinhlamviec/xetai.webp",
+          linkhinh: "assets/images/services/ship.jpeg",
         ),
       ],
     );
@@ -136,7 +136,7 @@ class DesktopShow extends StatelessWidget {
           width: defaultPadding,
         ),
         QuyTrinhNgang(
-          title: "Nhận hàng",
+          title: "Giao hàng",
           description:
               "Khách hàng nhận hàng tại tiệm hoặc sử dụng dịch vụ ship tận nơi.",
           linkhinh: "assets/images/quatrinhlamviec/xetai.webp",
@@ -214,8 +214,11 @@ class QuyTrinhDoc extends StatelessWidget {
       children: [
         Expanded(
           flex: 1,
-          child: Image.asset(
-            linkhinh,
+          child: ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(defaultPadding / 2)),
+            child: Image.asset(
+              linkhinh,
+            ),
           ),
         ),
         SizedBox(
@@ -232,9 +235,9 @@ class QuyTrinhDoc extends StatelessWidget {
                 title,
                 style: GoogleFonts.roboto(
                   textStyle: TextStyle(
-                      color: blackColor,
+                      color: mainColor,
                       fontSize: txtSizeLon,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.w800),
                 ),
               ),
               Text(
@@ -244,7 +247,7 @@ class QuyTrinhDoc extends StatelessWidget {
                   textStyle: TextStyle(
                       color: blackColor,
                       fontSize: txtSizeThuong,
-                      fontWeight: FontWeight.normal),
+                      fontWeight: FontWeight.w400),
                 ),
               )
             ],

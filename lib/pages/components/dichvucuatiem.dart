@@ -31,7 +31,7 @@ class DesktopShow extends StatelessWidget {
               BlendMode.modulate,
             ),
             child: Image.asset(
-              "assets/images/dichvu/dichvungang.webp",
+              "assets/images/dichvu/dichvu_ngang.jpeg",
               fit: BoxFit.cover,
             )),
         Container(
@@ -201,7 +201,7 @@ class MobileShow extends StatelessWidget {
             BlendMode.modulate,
           ),
           child: Image.asset(
-            "assets/images/dichvu/dvdacbiet.webp",
+            "assets/images/dichvu/dichvu_doc.jpeg",
             fit: BoxFit.cover,
           ),
         ),

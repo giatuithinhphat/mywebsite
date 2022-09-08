@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:website/pages/components/footer.dart';
 
 import '../../constants/constants.dart';
+import '../components/quytrinhtieuchuan.dart';
 import 'components/hinh_services.dart';
 import 'components/noidung.dart';
 import 'components/slogan_services.dart';
@@ -31,6 +33,7 @@ class ServicesPage extends StatelessWidget {
           SizedBox(
             height: defaultPadding * 3,
           ),
+          QuyTrinhTieuChuan(),
           Footer(),
         ],
       ),

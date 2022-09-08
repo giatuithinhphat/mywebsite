@@ -67,16 +67,11 @@ flutter:
   assets:
   - assets/icons/
   - assets/logo/
-  - assets/images/about/
+  - assets/images/
   - assets/images/banner/
+  - assets/images/hinhthucte/
   - assets/images/dichvu/
-  - assets/images/drink/
-  - assets/images/food/
-  - assets/images/hinhquangcaotiem/
-  - assets/images/home/
-  - assets/images/home/soluoc/
   - assets/images/khach/
-  - assets/images/quatrinhlamviec/
   - assets/images/slogan/
   - assets/images/services/
   #   - images/a_dot_burr.jpeg

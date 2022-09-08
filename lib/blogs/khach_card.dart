@@ -80,7 +80,7 @@ class MobileTabletShow extends StatelessWidget {
                             textStyle: TextStyle(
                                 color: Colors.black,
                                 fontSize: txtSizeThuong,
-                                fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.w600),
                           ),
                         ),
                         Text(
@@ -89,9 +89,9 @@ class MobileTabletShow extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.roboto(
                             textStyle: TextStyle(
-                                color: Colors.red,
-                                fontSize: txtSizeNho - 3,
-                                fontWeight: FontWeight.normal),
+                                color: Colors.blue,
+                                fontSize: txtSizeNho,
+                                fontWeight: FontWeight.w400),
                           ),
                         ),
                       ],

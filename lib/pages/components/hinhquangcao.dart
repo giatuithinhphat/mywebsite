@@ -78,10 +78,10 @@ class Hinh extends StatelessWidget {
                 margin: EdgeInsets.only(bottom: defaultPadding),
                 height: MediaQuery.of(context).size.height / 10,
                 width: ResponsiveWidget.isDesktop(context)
-                    ? MediaQuery.of(context).size.width / 3
+                    ? MediaQuery.of(context).size.width / 4
                     : MediaQuery.of(context).size.width / 2,
                 decoration: BoxDecoration(
-                    color: Colors.red.withOpacity(.8),
+                    color: mainColor.withOpacity(.9),
                     borderRadius:
                         BorderRadius.all(Radius.circular(defaultPadding))),
                 padding: EdgeInsets.all(ResponsiveWidget.isDesktop(context)

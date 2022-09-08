@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/helpers/responsive.dart';
+import 'package:website/pages/components/quytrinhtieuchuan.dart';
 import '../../constants/constants.dart';
 import '../components/footer.dart';
+import '../components/icon_va_text.dart';
 import '../components/quatrinhlamviec.dart';
 
 class ContactPage extends StatelessWidget {
@@ -44,19 +46,19 @@ class TabletShow extends StatelessWidget {
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/1.webp",
+              linkhinh: "assets/images/hinhthucte/Cha.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/2.webp",
+              linkhinh: "assets/images/hinhthucte/Me.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/3.webp",
+              linkhinh: "assets/images/hinhthucte/Z1000.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
@@ -72,19 +74,19 @@ class TabletShow extends StatelessWidget {
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/4.webp",
+              linkhinh: "assets/images/hinhthucte/GiatGau.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/5.webp",
+              linkhinh: "assets/images/hinhthucte/MayGiat.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/6.webp",
+              linkhinh: "assets/images/hinhthucte/Heo.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
@@ -94,7 +96,7 @@ class TabletShow extends StatelessWidget {
         SizedBox(
           height: defaultPadding * 2,
         ),
-        QuaTrinhLamViec(),
+        QuyTrinhTieuChuan(),
         SizedBox(
           height: defaultPadding,
         ),
@@ -135,13 +137,16 @@ class MobileShow extends StatelessWidget {
             ],
           ),
           child: ClipRRect(
-            child: Image.asset("assets/images/about/tphat.webp"),
+            child: Image.asset("assets/images/thinhphat_vuong.jpeg"),
           ),
         ),
         SizedBox(
           height: defaultPadding * 2,
         ),
         QuaTrinhLamViec(),
+        SizedBox(
+          height: defaultPadding * 2,
+        ),
         Footer(),
       ],
     );
@@ -184,7 +189,7 @@ class DesktopShow extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius:
                           BorderRadius.all(Radius.circular(defaultPadding)),
-                      child: Image.asset("assets/images/about/tphat.webp"),
+                      child: Image.asset("assets/images/thinhphat_vuong.jpeg"),
                     ),
                   )),
               SizedBox(
@@ -204,7 +209,7 @@ class DesktopShow extends StatelessWidget {
             ],
           ),
         ),
-        QuaTrinhLamViec(),
+        QuyTrinhTieuChuan(),
         SizedBox(
           height: defaultPadding,
         ),
@@ -376,42 +381,6 @@ class HinhNhoVaText extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class IconVaText extends StatelessWidget {
-  final IconData icon;
-  final String txt;
-  const IconVaText({
-    Key key,
-    this.icon,
-    this.txt,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          icon,
-          color: mainColor,
-        ),
-        SizedBox(
-          width: defaultPadding,
-        ),
-        Text(
-          txt,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: GoogleFonts.roboto(
-            textStyle: TextStyle(
-                color: blackColor,
-                fontSize: txtSizeThuong,
-                fontWeight: FontWeight.w700),
-          ),
-        ),
-      ],
     );
   }
 }

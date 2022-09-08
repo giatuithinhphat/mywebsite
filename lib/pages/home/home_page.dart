@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/constants/constants.dart';
 import 'package:website/helpers/responsive.dart';
+import 'package:website/pages/components/quytrinhtieuchuan.dart';
 import '../components/footer.dart';
 import '../components/dichvucuatiem.dart';
 import '../components/gioithieutiem.dart';
@@ -18,10 +19,12 @@ class HomePage extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Banner
-          Image.asset("assets/images/banner/banner.webp"),
+          Image.asset(
+            "assets/images/banner/banner.webp",
+            fit: BoxFit.cover,
+          ),
           SizedBox(
             height: ResponsiveWidget.isDesktop(context)
                 ? defaultPadding * 3
@@ -73,7 +76,7 @@ class HomePage extends StatelessWidget {
                 ? defaultPadding
                 : defaultPadding * 3,
           ),
-          QuaTrinhLamViec(),
+          QuyTrinhTieuChuan(),
           SizedBox(
             height: ResponsiveWidget.isMobile(context)
                 ? defaultPadding

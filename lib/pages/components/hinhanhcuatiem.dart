@@ -64,22 +64,24 @@ class DesktopShow extends StatelessWidget {
           child: AspectRatio(
               aspectRatio: 3 / 2,
               child: Container(
-                decoration: BoxDecoration(boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: Offset(0, 3),
-                  )
-                ]),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3),
+                      )
+                    ]),
                 child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     child: Image.asset(
-                        "assets/images/hinhquangcaotiem/ngang.webp")),
+                        "assets/images/hinhthucte/tiem_16_10.jpeg")),
               )),
         ),
         SizedBox(
-          width: defaultPadding / 2,
+          width: defaultPadding * 2,
         ),
         Expanded(
           flex: 1,
@@ -88,19 +90,19 @@ class DesktopShow extends StatelessWidget {
               Row(
                 children: [
                   HinhNhoTiem(
-                    linkhinh: "assets/images/hinhquangcaotiem/5.webp",
+                    linkhinh: "assets/images/hinhthucte/Me.jpeg",
                   ),
                   SizedBox(
                     width: defaultPadding / 2,
                   ),
                   HinhNhoTiem(
-                    linkhinh: "assets/images/hinhquangcaotiem/2.webp",
+                    linkhinh: "assets/images/hinhthucte/GiatGau.jpeg",
                   ),
                   SizedBox(
                     width: defaultPadding / 2,
                   ),
                   HinhNhoTiem(
-                    linkhinh: "assets/images/hinhquangcaotiem/3.webp",
+                    linkhinh: "assets/images/hinhthucte/MayGiat.jpeg",
                   ),
                 ],
               ),
@@ -110,19 +112,19 @@ class DesktopShow extends StatelessWidget {
               Row(
                 children: [
                   HinhNhoTiem(
-                    linkhinh: "assets/images/hinhquangcaotiem/4.webp",
+                    linkhinh: "assets/images/hinhthucte/Cha.jpeg",
                   ),
                   SizedBox(
                     width: defaultPadding / 2,
                   ),
                   HinhNhoTiem(
-                    linkhinh: "assets/images/hinhquangcaotiem/1.webp",
+                    linkhinh: "assets/images/hinhthucte/Heo.jpeg",
                   ),
                   SizedBox(
                     width: defaultPadding / 2,
                   ),
                   HinhNhoTiem(
-                    linkhinh: "assets/images/hinhquangcaotiem/6.webp",
+                    linkhinh: "assets/images/hinhthucte/Me.jpeg",
                   ),
                 ],
               ),
@@ -154,7 +156,7 @@ class MobileShow extends StatelessWidget {
           ]),
           child: ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(10)),
-              child: Image.asset("assets/images/hinhquangcaotiem/ngang.webp")),
+              child: Image.asset("assets/images/hinhthucte/tiem_16_10.jpeg")),
         ),
         SizedBox(
           height: defaultPadding / 2,
@@ -162,19 +164,19 @@ class MobileShow extends StatelessWidget {
         Row(
           children: [
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/1.webp",
+              linkhinh: "assets/images/hinhthucte/Cha.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/2.webp",
+              linkhinh: "assets/images/hinhthucte/Me.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/3.webp",
+              linkhinh: "assets/images/hinhthucte/GiatGau.jpeg",
             ),
           ],
         ),
@@ -184,19 +186,19 @@ class MobileShow extends StatelessWidget {
         Row(
           children: [
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/4.webp",
+              linkhinh: "assets/images/hinhthucte/Heo.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/5.webp",
+              linkhinh: "assets/images/hinhthucte/MayGiat.jpeg",
             ),
             SizedBox(
               width: defaultPadding / 2,
             ),
             HinhNhoTiem(
-              linkhinh: "assets/images/hinhquangcaotiem/6.webp",
+              linkhinh: "assets/images/hinhthucte/Z1000.jpeg",
             ),
           ],
         ),
